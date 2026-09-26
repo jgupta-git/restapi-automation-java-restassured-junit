@@ -1,0 +1,25 @@
+package com.automationexercise.api.config;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.Properties;
+
+public final class ApiConfig {
+
+    private static final Properties props = new Properties();
+
+    static {
+        try (InputStream in = ApiConfig.class.getClassLoader()
+                .getResourceAsStream("config.properties")) {
+            props.load(in);
+        } catch (IOException e) {
+            throw new RuntimeException("Failed to load config.properties", e);
+        }
+    }
+
+    public static String baseUrl() {
+        return props.getProperty("base.url");
+    }
+
+    private ApiConfig() {}
+}
