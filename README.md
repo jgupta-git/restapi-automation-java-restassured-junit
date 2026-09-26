@@ -48,7 +48,9 @@ Available runners: `ProductApiRunner`, `BrandApiRunner`, `AuthApiRunner`, `UserA
 
 ## Reports
 
-Cucumber HTML reports are generated at `target/cucumber-html-reports/overview-features.html` via `maven-cucumber-reporting` plugin. Jenkins post-build uses Publish HTML Reports.
+[Live Cucumber Report](https://jgupta-git.github.io/restapi-automation-java-restassured-junit/) — hosted on GitHub Pages
+
+Reports are generated at `target/cucumber-html-reports/` via `maven-cucumber-reporting` plugin. Jenkins post-build uses Publish HTML Reports.
 
 ## Project Guide
 
