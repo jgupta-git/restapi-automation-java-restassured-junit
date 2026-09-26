@@ -11,23 +11,23 @@ public class ProductApiSteps {
 
     private final ProductService productService = new ProductService();
 
-    @When("I send a GET request to the products list endpoint")
-    public void i_send_a_get_request_to_the_products_list_endpoint() {
+    @When("user sends a GET request to the products list endpoint")
+    public void user_sends_a_get_request_to_the_products_list_endpoint() {
         CommonApiSteps.setResponse(productService.getAllProducts());
     }
 
-    @When("I send a POST request to the products list endpoint")
-    public void i_send_a_post_request_to_the_products_list_endpoint() {
+    @When("user sends a POST request to the products list endpoint")
+    public void user_sends_a_post_request_to_the_products_list_endpoint() {
         CommonApiSteps.setResponse(productService.postToProductsList());
     }
 
-    @When("I search for products with keyword {string}")
-    public void i_search_for_products_with_keyword(String keyword) {
+    @When("user searches for products with keyword {string}")
+    public void user_searches_for_products_with_keyword(String keyword) {
         CommonApiSteps.setResponse(productService.searchProduct(keyword));
     }
 
-    @When("I search for products without the search parameter")
-    public void i_search_for_products_without_the_search_parameter() {
+    @When("user searches for products without the search parameter")
+    public void user_searches_for_products_without_the_search_parameter() {
         CommonApiSteps.setResponse(productService.searchProductWithoutParam());
     }
 

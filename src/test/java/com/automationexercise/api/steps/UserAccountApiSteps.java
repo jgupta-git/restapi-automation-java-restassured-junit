@@ -60,29 +60,29 @@ public class UserAccountApiSteps {
         accountDeleted = true;
     }
 
-    @When("I create a user account with the following details:")
-    public void i_create_a_user_account_with_the_following_details(Map<String, String> data) {
+    @When("user creates a user account with the following details:")
+    public void user_creates_a_user_account_with_the_following_details(Map<String, String> data) {
         UserAccount user = buildFromTable(data);
         activeEmail = user.getEmail();
         activePassword = user.getPassword();
         CommonApiSteps.setResponse(userAccountService.createAccount(user));
     }
 
-    @When("I get the user account by email {string}")
-    public void i_get_the_user_account_by_email(String email) {
+    @When("user gets the user account by email {string}")
+    public void user_gets_the_user_account_by_email(String email) {
         CommonApiSteps.setResponse(userAccountService.getUserByEmail(email));
     }
 
-    @When("I update the user account {string} with password {string} and:")
-    public void i_update_the_user_account_with(String email, String password, Map<String, String> data) {
+    @When("user updates the user account {string} with password {string} and:")
+    public void user_updates_the_user_account_with(String email, String password, Map<String, String> data) {
         UserAccount user = buildFromTable(data);
         user.setEmail(email);
         user.setPassword(password);
         CommonApiSteps.setResponse(userAccountService.updateAccount(user));
     }
 
-    @When("I delete the user account with email {string} and password {string}")
-    public void i_delete_the_user_account(String email, String password) {
+    @When("user deletes the user account with email {string} and password {string}")
+    public void user_deletes_the_user_account(String email, String password) {
         CommonApiSteps.setResponse(userAccountService.deleteAccount(email, password));
         accountDeleted = true;
     }

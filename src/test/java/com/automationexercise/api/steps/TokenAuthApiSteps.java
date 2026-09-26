@@ -17,8 +17,8 @@ public class TokenAuthApiSteps {
     private String accessToken;
     private String refreshToken;
 
-    @When("I login to DummyJSON with username {string} and password {string}")
-    public void i_login_with(String username, String password) {
+    @When("user logs in to DummyJSON with username {string} and password {string}")
+    public void user_logs_in_with(String username, String password) {
         Response response = tokenAuthService.login(username, password);
         CommonApiSteps.setResponse(response);
         if (response.statusCode() == 200) {
@@ -27,31 +27,31 @@ public class TokenAuthApiSteps {
         }
     }
 
-    @Given("I have logged in to DummyJSON with username {string} and password {string}")
-    public void i_have_logged_in(String username, String password) {
+    @Given("user has logged in to DummyJSON with username {string} and password {string}")
+    public void user_has_logged_in(String username, String password) {
         Response response = tokenAuthService.login(username, password);
         accessToken = response.jsonPath().getString("accessToken");
         refreshToken = response.jsonPath().getString("refreshToken");
         assertNotNull("Login failed — no access token returned", accessToken);
     }
 
-    @When("I request the authenticated user profile")
-    public void i_request_the_authenticated_user_profile() {
+    @When("user requests the authenticated user profile")
+    public void user_requests_the_authenticated_user_profile() {
         CommonApiSteps.setResponse(tokenAuthService.getAuthUser(accessToken));
     }
 
-    @When("I request the authenticated user profile without a token")
-    public void i_request_profile_without_token() {
+    @When("user requests the authenticated user profile without a token")
+    public void user_requests_profile_without_token() {
         CommonApiSteps.setResponse(tokenAuthService.getAuthUserWithoutToken());
     }
 
-    @When("I request the authenticated user profile with token {string}")
-    public void i_request_profile_with_invalid_token(String token) {
+    @When("user requests the authenticated user profile with token {string}")
+    public void user_requests_profile_with_invalid_token(String token) {
         CommonApiSteps.setResponse(tokenAuthService.getAuthUser(token));
     }
 
-    @When("I refresh the auth session")
-    public void i_refresh_the_auth_session() {
+    @When("user refreshes the auth session")
+    public void user_refreshes_the_auth_session() {
         CommonApiSteps.setResponse(tokenAuthService.refreshToken(refreshToken));
     }
 

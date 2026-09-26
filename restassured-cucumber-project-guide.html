@@ -13,6 +13,8 @@
   --green-light: #dcfce7;
   --orange: #ea580c;
   --orange-light: #fff7ed;
+  --purple: #7c3aed;
+  --purple-light: #ede9fe;
   --border: #e2e8f0;
   --code-bg: #1e293b;
   --code-text: #e2e8f0;
@@ -32,6 +34,8 @@
     --green-light: #14532d;
     --orange: #fb923c;
     --orange-light: #431407;
+    --purple: #a78bfa;
+    --purple-light: #2e1065;
     --border: #334155;
     --code-bg: #0f172a;
     --code-text: #cbd5e1;
@@ -52,6 +56,8 @@
   --green-light: #14532d;
   --orange: #fb923c;
   --orange-light: #431407;
+  --purple: #a78bfa;
+  --purple-light: #2e1065;
   --border: #334155;
   --code-bg: #0f172a;
   --code-text: #cbd5e1;
@@ -146,6 +152,7 @@ pre code {
 }
 .tag.green { background: var(--green-light); color: var(--green); }
 .tag.orange { background: var(--orange-light); color: var(--orange); }
+.tag.purple { background: var(--purple-light); color: var(--purple); }
 .count {
   font-variant-numeric: tabular-nums;
   font-weight: 600;
@@ -220,9 +227,9 @@ tr:last-child td { border-bottom: none; }
 <p class="subtitle">restapi-automation-java-restassured-junit &mdash; Quick Reference</p>
 
 <div class="stat-row">
-  <div class="stat"><div class="count">22</div><div class="count-label">Scenarios</div></div>
-  <div class="stat"><div class="count">5</div><div class="count-label">Feature Files</div></div>
-  <div class="stat"><div class="count">197</div><div class="count-label">Steps</div></div>
+  <div class="stat"><div class="count">39</div><div class="count-label">Scenarios</div></div>
+  <div class="stat"><div class="count">9</div><div class="count-label">Feature Files</div></div>
+  <div class="stat"><div class="count">9</div><div class="count-label">Runners</div></div>
   <div class="stat"><div class="count">2</div><div class="count-label">APIs Tested</div></div>
 </div>
 
@@ -241,15 +248,24 @@ tr:last-child td { border-bottom: none; }
 <div class="card">
 <div class="tree">
 <span class="dir">src/test/java/com/automationexercise/api/</span><br>
-&nbsp;&nbsp;<span class="dir">config/</span> <span class="file">ApiConfig.java</span><br>
+&nbsp;&nbsp;<span class="dir">config/</span> <span class="file">ApiConfig.java</span> &mdash; loads config.properties + dummyjson.properties<br>
 &nbsp;&nbsp;<span class="dir">hooks/</span> <span class="file">Hooks.java</span> &mdash; REST Assured setup, content-type fix, @AfterStep response logging<br>
 &nbsp;&nbsp;<span class="dir">models/</span> <span class="file">UserAccount.java</span> &mdash; POJO with 17 fields<br>
-&nbsp;&nbsp;<span class="dir">runners/</span> <span class="file">AuthApiRunner</span> | <span class="file">BrandApiRunner</span> | <span class="file">ProductApiRunner</span> | <span class="file">TokenAuthApiRunner</span> | <span class="file">UserAccountApiRunner</span><br>
-&nbsp;&nbsp;<span class="dir">services/</span> <span class="file">AuthService</span> | <span class="file">BrandService</span> | <span class="file">ProductService</span> | <span class="file">UserAccountService</span> | <span class="file">TokenAuthService</span><br>
-&nbsp;&nbsp;<span class="dir">steps/</span> <span class="file">CommonApiSteps</span> | <span class="file">AuthApiSteps</span> | <span class="file">BrandApiSteps</span> | <span class="file">ProductApiSteps</span> | <span class="file">UserAccountApiSteps</span> | <span class="file">TokenAuthApiSteps</span><br>
+&nbsp;&nbsp;<span class="dir">runners/</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="file">AuthApiRunner</span> | <span class="file">BrandApiRunner</span> | <span class="file">ProductApiRunner</span> | <span class="file">TokenAuthApiRunner</span> | <span class="file">UserAccountApiRunner</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="file">QueryParamsRunner</span> | <span class="file">SortingRunner</span> | <span class="file">HamcrestAssertionsRunner</span> | <span class="file">SchemaValidationRunner</span><br>
+&nbsp;&nbsp;<span class="dir">services/</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="file">AuthService</span> | <span class="file">BrandService</span> | <span class="file">ProductService</span> | <span class="file">UserAccountService</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="file">TokenAuthService</span> | <span class="file">DummyJsonProductService</span><br>
+&nbsp;&nbsp;<span class="dir">steps/</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="file">CommonApiSteps</span> | <span class="file">AuthApiSteps</span> | <span class="file">BrandApiSteps</span> | <span class="file">ProductApiSteps</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="file">UserAccountApiSteps</span> | <span class="file">TokenAuthApiSteps</span> | <span class="file">DummyJsonProductsApiSteps</span><br>
 <span class="dir">src/test/resources/</span><br>
-&nbsp;&nbsp;<span class="file">config.properties</span> | <span class="file">cucumber.properties</span><br>
-&nbsp;&nbsp;<span class="dir">features/</span> <span class="file">auth_api</span> | <span class="file">brand_api</span> | <span class="file">product_api</span> | <span class="file">token_auth_api</span> | <span class="file">user_account_api</span>
+&nbsp;&nbsp;<span class="file">config.properties</span> | <span class="file">dummyjson.properties</span> | <span class="file">cucumber.properties</span><br>
+&nbsp;&nbsp;<span class="dir">features/</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="file">auth_api</span> | <span class="file">brand_api</span> | <span class="file">product_api</span> | <span class="file">token_auth_api</span> | <span class="file">user_account_api</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="file">query_params</span> | <span class="file">sorting</span> | <span class="file">hamcrest_assertions</span> | <span class="file">schema_validation</span><br>
+&nbsp;&nbsp;<span class="dir">schemas/</span> <span class="file">dummyjson-product.json</span> | <span class="file">dummyjson-products-list.json</span>
 </div>
 </div>
 
@@ -258,31 +274,91 @@ tr:last-child td { border-bottom: none; }
 <div class="card" style="overflow-x:auto">
 <table>
 <tr><th>Feature</th><th>Scenarios</th><th>API</th><th>Coverage</th></tr>
-<tr><td><code>product_api.feature</code></td><td>5</td><td>AutomationExercise</td><td>GET list, POST 405, search, missing param 400</td></tr>
-<tr><td><code>brand_api.feature</code></td><td>2</td><td>AutomationExercise</td><td>GET list, PUT 405</td></tr>
-<tr><td><code>auth_api.feature</code></td><td>4</td><td>AutomationExercise</td><td>Valid login, missing email, DELETE 405, invalid creds</td></tr>
-<tr><td><code>user_account_api.feature</code></td><td>5</td><td>AutomationExercise</td><td>Create, read, update, delete, get non-existent</td></tr>
-<tr><td><code>token_auth_api.feature</code></td><td>6</td><td>DummyJSON</td><td>JWT login, Bearer access, refresh, invalid creds, no token, invalid token</td></tr>
+<tr><td><code>product_api</code></td><td>5</td><td>AutomationExercise</td><td>GET list, POST 405, search, missing param 400</td></tr>
+<tr><td><code>brand_api</code></td><td>2</td><td>AutomationExercise</td><td>GET list, PUT 405</td></tr>
+<tr><td><code>auth_api</code></td><td>4</td><td>AutomationExercise</td><td>Valid login, missing email, DELETE 405, invalid creds</td></tr>
+<tr><td><code>user_account_api</code></td><td>5</td><td>AutomationExercise</td><td>Create, read, update, delete, get after delete</td></tr>
+<tr><td><code>token_auth_api</code></td><td>6</td><td>DummyJSON</td><td>JWT login, Bearer access, refresh, invalid creds, no token, invalid token</td></tr>
+<tr><td><code>query_params</code></td><td>9</td><td>DummyJSON</td><td>Pagination (limit/skip), field select, category filter, search, Scenario Outline</td></tr>
+<tr><td><code>sorting</code></td><td>3</td><td>DummyJSON</td><td>Sort by price asc/desc, rating desc &mdash; Scenario Outline</td></tr>
+<tr><td><code>hamcrest_assertions</code></td><td>2</td><td>DummyJSON</td><td>Chained body assertions via DataTable, collection-level everyItem matchers</td></tr>
+<tr><td><code>schema_validation</code></td><td>3</td><td>DummyJSON</td><td>JSON Schema for single product &amp; list, ResponseSpec, response time</td></tr>
 </table>
 </div>
 
-<h2>Run Commands</h2>
+<h2>Advanced Techniques</h2>
 
-<h3>Run all tests</h3>
-<pre><code>mvn test</code></pre>
+<div class="grid-2">
+<div class="card">
+<h3>Data-Table-Driven Assertions <span class="tag purple">REUSABLE</span></h3>
+<p style="font-size:0.85rem;color:var(--text-muted)">One step definition drives all assertions from a Cucumber DataTable. Supports 10 matchers.</p>
+<pre><code># Feature file
+And the response should match:
+  | field  | matcher      | value |
+  | id     | notNull      |       |
+  | title  | notEmpty     |       |
+  | price  | greaterThan  | 0     |
+  | rating | between      | 0,5   |
+  | tags   | notEmptyList |       |
 
-<h3>Run a specific suite</h3>
-<pre><code>mvn test -DtestSuite=ProductApiRunner
-mvn test -DtestSuite=BrandApiRunner
-mvn test -DtestSuite=AuthApiRunner
-mvn test -DtestSuite=UserAccountApiRunner
-mvn test -DtestSuite=TokenAuthApiRunner</code></pre>
+# Matchers available:
+# notNull, notEmpty, notEmptyList,
+# greaterThan, between, equalTo,
+# equalToInt, listSize,
+# everyItemNotNull, everyItemNull,
+# everyItemEquals</code></pre>
+</div>
 
-<h3>Jenkins parameterized build</h3>
-<pre><code>Goal: clean test -DtestSuite=${testSuite}
-Parameter: Choice &rarr; testSuite
-Values: *Runner | ProductApiRunner | BrandApiRunner | AuthApiRunner
-         UserAccountApiRunner | TokenAuthApiRunner</code></pre>
+<div class="card">
+<h3>JSON Schema Validation <span class="tag green">CONTRACT</span></h3>
+<p style="font-size:0.85rem;color:var(--text-muted)">Validates API responses against JSON Schema files in <code>src/test/resources/schemas/</code>.</p>
+<pre><code># Feature file
+And the response should match the
+  "dummyjson-product" JSON schema
+
+# Step definition
+CommonApiSteps.getResponse().then()
+  .body(matchesJsonSchemaInClasspath(
+    "schemas/" + schemaName + ".json"
+  ));
+
+# Dependency
+io.rest-assured:json-schema-validator</code></pre>
+</div>
+
+<div class="card">
+<h3>Response Spec <span class="tag">DRY</span></h3>
+<p style="font-size:0.85rem;color:var(--text-muted)">Reusable response specification for standard DummyJSON endpoints.</p>
+<pre><code>ResponseSpecification SPEC =
+  new ResponseSpecBuilder()
+    .expectStatusCode(200)
+    .expectContentType("application/json")
+    .expectBody("products", notNullValue())
+    .expectBody("total", greaterThan(0))
+    .build();
+
+// Usage in step
+CommonApiSteps.getResponse().then()
+  .spec(SPEC);</code></pre>
+</div>
+
+<div class="card">
+<h3>Scenario Outline <span class="tag">DATA-DRIVEN</span></h3>
+<p style="font-size:0.85rem;color:var(--text-muted)">Same test structure, multiple data combinations via Examples table.</p>
+<pre><code>Scenario Outline: GET products sorted
+  When user fetches products sorted
+    by "&lt;field&gt;" in "&lt;order&gt;" order
+  Then the HTTP status code should be 200
+  And the products should be sorted
+    by "&lt;field&gt;" in "&lt;order&gt;" order
+
+  Examples:
+    | field  | order |
+    | price  | asc   |
+    | price  | desc  |
+    | rating | desc  |</code></pre>
+</div>
+</div>
 
 <h2>Key Code Patterns</h2>
 
@@ -294,9 +370,6 @@ Values: *Runner | ProductApiRunner | BrandApiRunner | AuthApiRunner
 RestAssured.defaultParser = Parser.JSON;
 RestAssured.registerParser(
   "text/html", Parser.JSON);
-RestAssured.registerParser(
-  "text/html; charset=utf-8",
-  Parser.JSON);
 
 // Response filter override
 ((RestAssuredResponseImpl) response)
@@ -337,21 +410,48 @@ public void logResponseToReport(
 </div>
 
 <div class="card">
-<h3>Shared Response <span class="tag">THREADING</span></h3>
-<p style="font-size:0.85rem;color:var(--text-muted)">ThreadLocal stores response across step classes. Flag prevents duplicate logging.</p>
-<pre><code>// CommonApiSteps.java
-private static final
-  ThreadLocal&lt;Response&gt; currentResponse
-    = new ThreadLocal&lt;&gt;();
-private static final
-  ThreadLocal&lt;Boolean&gt; responseLogged
-    = ThreadLocal
-      .withInitial(() -&gt; true);
+<h3>Multi-Config Properties <span class="tag">CONFIG</span></h3>
+<p style="font-size:0.85rem;color:var(--text-muted)">Separate config files per API. No hardcoded URLs in service classes.</p>
+<pre><code>// ApiConfig.java
+public static String baseUrl() {
+  return props.getProperty("base.url");
+}
+public static String dummyJsonBaseUrl() {
+  return dummyJsonProps
+    .getProperty("base.url");
+}
 
-// Set from any step class:
-CommonApiSteps.setResponse(response);</code></pre>
+// config.properties
+base.url=https://automationexercise.com/api
+
+// dummyjson.properties
+base.url=https://dummyjson.com</code></pre>
 </div>
 </div>
+
+<h2>Run Commands</h2>
+
+<h3>Run all tests</h3>
+<pre><code>mvn clean verify</code></pre>
+
+<h3>Run a specific suite</h3>
+<pre><code>mvn test -DtestSuite=ProductApiRunner
+mvn test -DtestSuite=BrandApiRunner
+mvn test -DtestSuite=AuthApiRunner
+mvn test -DtestSuite=UserAccountApiRunner
+mvn test -DtestSuite=TokenAuthApiRunner
+mvn test -DtestSuite=QueryParamsRunner
+mvn test -DtestSuite=SortingRunner
+mvn test -DtestSuite=HamcrestAssertionsRunner
+mvn test -DtestSuite=SchemaValidationRunner</code></pre>
+
+<h3>Jenkins parameterized build</h3>
+<pre><code>Goal: clean verify -DtestSuite=${testSuite}
+Parameter: Choice &rarr; testSuite
+Values: *Runner | ProductApiRunner | BrandApiRunner | AuthApiRunner
+         UserAccountApiRunner | TokenAuthApiRunner
+         QueryParamsRunner | SortingRunner
+         HamcrestAssertionsRunner | SchemaValidationRunner</code></pre>
 
 <h2>Tech Stack</h2>
 
@@ -359,6 +459,7 @@ CommonApiSteps.setResponse(response);</code></pre>
 <div class="card">
 <table>
 <tr><td><strong>REST Assured</strong></td><td>5.5.1</td></tr>
+<tr><td><strong>JSON Schema Validator</strong></td><td>5.5.1</td></tr>
 <tr><td><strong>Cucumber</strong></td><td>7.34.9</td></tr>
 <tr><td><strong>JUnit</strong></td><td>4.13.2</td></tr>
 <tr><td><strong>Jackson</strong></td><td>2.18.3</td></tr>
@@ -369,7 +470,7 @@ CommonApiSteps.setResponse(response);</code></pre>
 <div class="card">
 <h3>APIs Under Test</h3>
 <p style="font-size:0.85rem;margin:0.25rem 0"><strong>AutomationExercise</strong><br><code>https://automationexercise.com/api</code><br><span style="color:var(--text-muted)">Products, Brands, Auth, User Accounts</span></p>
-<p style="font-size:0.85rem;margin:0.75rem 0 0.25rem"><strong>DummyJSON</strong><br><code>https://dummyjson.com</code><br><span style="color:var(--text-muted)">JWT login, Bearer token, token refresh</span></p>
+<p style="font-size:0.85rem;margin:0.75rem 0 0.25rem"><strong>DummyJSON</strong><br><code>https://dummyjson.com</code><br><span style="color:var(--text-muted)">JWT auth, Products (query params, sorting, pagination, search, categories)</span></p>
 </div>
 </div>
 
@@ -380,8 +481,7 @@ CommonApiSteps.setResponse(response);</code></pre>
 <tr><td><strong>Repo</strong></td><td><code>github.com/jgupta-git/restapi-automation-java-restassured-junit</code></td></tr>
 <tr><td><strong>Branch</strong></td><td><code>main</code></td></tr>
 <tr><td><strong>Jenkins Job</strong></td><td><code>restapi-automation-run</code> (Maven project, parameterized)</td></tr>
-<tr><td><strong>Maven Goal</strong></td><td><code>clean test -DtestSuite=${testSuite}</code></td></tr>
-<tr><td><strong>Reports</strong></td><td><code>target/cucumber-reports/*-report.html</code></td></tr>
+<tr><td><strong>Maven Goal</strong></td><td><code>clean verify -DtestSuite=${testSuite}</code></td></tr>
+<tr><td><strong>Post-Build</strong></td><td>Publish HTML reports &rarr; <code>target/cucumber-html-reports</code> &rarr; <code>overview-features.html</code></td></tr>
 </table>
 </div>
-

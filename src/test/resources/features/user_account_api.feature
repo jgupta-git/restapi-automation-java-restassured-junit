@@ -7,7 +7,7 @@ Feature: User Account API
   @Scenario-1 @positive @smoke
   Scenario: POST to create a new user account
     Given any existing account with email "jg_qa_create@testmail.com" and password "Pass1234!" is cleaned up
-    When I create a user account with the following details:
+    When user creates a user account with the following details:
       | name           | TestUser                     |
       | email          | jg_qa_create@testmail.com    |
       | password       | Pass1234!                    |
@@ -48,7 +48,7 @@ Feature: User Account API
       | state          | Ontario                      |
       | city           | Toronto                      |
       | mobile_number  | 4165551234                   |
-    When I get the user account by email "jg_qa_getuser@testmail.com"
+    When user gets the user account by email "jg_qa_getuser@testmail.com"
     Then the response code should be 200
     And the user detail should match:
       | email     | jg_qa_getuser@testmail.com |
@@ -80,7 +80,7 @@ Feature: User Account API
       | state          | California                     |
       | city           | Los Angeles                    |
       | mobile_number  | 3105559876                     |
-    When I update the user account "jg_qa_update@testmail.com" with password "Update789!" and:
+    When user updates the user account "jg_qa_update@testmail.com" with password "Update789!" and:
       | name           | UpdateMe                       |
       | title          | Mr                             |
       | birth_date     | 10                             |
@@ -98,7 +98,7 @@ Feature: User Account API
       | mobile_number  | 3105559876                     |
     Then the response code should be 200
     And the response message should be "User updated!"
-    When I get the user account by email "jg_qa_update@testmail.com"
+    When user gets the user account by email "jg_qa_update@testmail.com"
     Then the user detail should match:
       | firstname | After   |
       | lastname  | Changed |
@@ -124,7 +124,7 @@ Feature: User Account API
       | state          | Delhi                          |
       | city           | New Delhi                      |
       | mobile_number  | 9876543210                     |
-    When I delete the user account with email "jg_qa_delete@testmail.com" and password "Delete000!"
+    When user deletes the user account with email "jg_qa_delete@testmail.com" and password "Delete000!"
     Then the response code should be 200
     And the response message should be "Account deleted!"
 
@@ -149,5 +149,5 @@ Feature: User Account API
       | city           | Houston                        |
       | mobile_number  | 7135550000                     |
     And the user account with email "jg_qa_ghost@testmail.com" and password "Ghost999!" has been deleted
-    When I get the user account by email "jg_qa_ghost@testmail.com"
+    When user gets the user account by email "jg_qa_ghost@testmail.com"
     Then the response code should be 404

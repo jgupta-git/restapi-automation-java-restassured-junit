@@ -11,13 +11,13 @@ public class BrandApiSteps {
 
     private final BrandService brandService = new BrandService();
 
-    @When("I send a GET request to the brands list endpoint")
-    public void i_send_a_get_request_to_the_brands_list_endpoint() {
+    @When("user sends a GET request to the brands list endpoint")
+    public void user_sends_a_get_request_to_the_brands_list_endpoint() {
         CommonApiSteps.setResponse(brandService.getAllBrands());
     }
 
-    @When("I send a PUT request to the brands list endpoint")
-    public void i_send_a_put_request_to_the_brands_list_endpoint() {
+    @When("user sends a PUT request to the brands list endpoint")
+    public void user_sends_a_put_request_to_the_brands_list_endpoint() {
         CommonApiSteps.setResponse(brandService.putToBrandsList());
     }
 

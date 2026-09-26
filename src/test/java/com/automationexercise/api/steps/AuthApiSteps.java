@@ -40,18 +40,18 @@ public class AuthApiSteps {
         userAccountService.createAccount(user);
     }
 
-    @When("I verify login without the email parameter using password {string}")
-    public void i_verify_login_without_the_email_parameter(String password) {
+    @When("user verifies login without the email parameter using password {string}")
+    public void user_verifies_login_without_the_email_parameter(String password) {
         CommonApiSteps.setResponse(authService.verifyLoginWithoutEmail(password));
     }
 
-    @When("I verify login with email {string} and password {string}")
-    public void i_verify_login_with_email_and_password(String email, String password) {
+    @When("user verifies login with email {string} and password {string}")
+    public void user_verifies_login_with_email_and_password(String email, String password) {
         CommonApiSteps.setResponse(authService.verifyLogin(email, password));
     }
 
-    @When("I send a DELETE request to the verify login endpoint")
-    public void i_send_a_delete_request_to_the_verify_login_endpoint() {
+    @When("user sends a DELETE request to the verify login endpoint")
+    public void user_sends_a_delete_request_to_the_verify_login_endpoint() {
         CommonApiSteps.setResponse(authService.deleteToVerifyLogin());
     }
 

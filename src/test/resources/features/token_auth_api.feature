@@ -6,7 +6,7 @@ Feature: Token-based Authentication API (DummyJSON)
 
   @Scenario-1 @positive @smoke
   Scenario: Login with valid credentials returns access and refresh tokens
-    When I login to DummyJSON with username "emilys" and password "emilyspass"
+    When user logs in to DummyJSON with username "emilys" and password "emilyspass"
     Then the HTTP status code should be 200
     And the response should contain a non-empty "accessToken" field
     And the response should contain a non-empty "refreshToken" field
@@ -17,8 +17,8 @@ Feature: Token-based Authentication API (DummyJSON)
 
   @Scenario-2 @positive
   Scenario: Access protected endpoint with valid Bearer token
-    Given I have logged in to DummyJSON with username "emilys" and password "emilyspass"
-    When I request the authenticated user profile
+    Given user has logged in to DummyJSON with username "emilys" and password "emilyspass"
+    When user requests the authenticated user profile
     Then the HTTP status code should be 200
     And the response should contain user details:
       | username  | emilys                          |
@@ -28,25 +28,25 @@ Feature: Token-based Authentication API (DummyJSON)
 
   @Scenario-3 @positive
   Scenario: Refresh token returns a new access token
-    Given I have logged in to DummyJSON with username "emilys" and password "emilyspass"
-    When I refresh the auth session
+    Given user has logged in to DummyJSON with username "emilys" and password "emilyspass"
+    When user refreshes the auth session
     Then the HTTP status code should be 200
     And the response should contain a non-empty "accessToken" field
     And the response should contain a non-empty "refreshToken" field
 
   @Scenario-4 @negative
   Scenario: Login with invalid credentials returns error
-    When I login to DummyJSON with username "emilys" and password "wrongpassword"
+    When user logs in to DummyJSON with username "emilys" and password "wrongpassword"
     Then the HTTP status code should be 400
     And the response should contain field "message" with value "Invalid credentials"
 
   @Scenario-5 @negative
   Scenario: Access protected endpoint without token returns 401
-    When I request the authenticated user profile without a token
+    When user requests the authenticated user profile without a token
     Then the HTTP status code should be 401
     And the response should contain field "message" with value "Access Token is required"
 
   @Scenario-6 @negative
   Scenario: Access protected endpoint with invalid token returns 500
-    When I request the authenticated user profile with token "invalid.jwt.token"
+    When user requests the authenticated user profile with token "invalid.jwt.token"
     Then the HTTP status code should be 500
