@@ -76,6 +76,28 @@
                     </includes>
                 </configuration>
             </plugin>
+            <plugin>
+                <groupId>net.masterthought</groupId>
+                <artifactId>maven-cucumber-reporting</artifactId>
+                <version>5.8.2</version>
+                <executions>
+                    <execution>
+                        <id>generate-cucumber-reports</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>generate</goal>
+                        </goals>
+                        <configuration>
+                            <projectName>REST API Automation</projectName>
+                            <outputDirectory>${project.build.directory}/cucumber-html-reports</outputDirectory>
+                            <jsonFiles>
+                                <param>**/*.json</param>
+                            </jsonFiles>
+                            <inputDirectory>${project.build.directory}/cucumber-reports</inputDirectory>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
         </plugins>
     </build>
 </project>
