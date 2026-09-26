@@ -1,0 +1,2836 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.tablesorter.min.js"></script>
+<script src="js/Chart.min.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script>
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<title>Cucumber Reports (no 1) - Tag: @Scenario-6</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+        <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation" ><a href="overview-steps.html">Steps</a></li>
+        <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+        <th>Number</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>REST API Automation</td>
+        <td>1</td>
+      <td>26 Sep 2026, 13:48</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+  </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Tag Report</h2>
+  </div>
+</div>
+
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table class="stats-table">
+
+
+<thead>
+  <tr class="header dont-sort">
+      <th></th>
+    <th colspan="6">Steps</th>
+    <th colspan="3">Scenarios</th>
+    <th colspan="2">Features</th>
+  </tr>
+  <tr>
+    <th>Tag</th>
+    <th class="passed">Passed</th>
+    <th class="failed">Failed</th>
+    <th class="skipped">Skipped</th>
+    <th class="pending">Pending</th>
+    <th class="undefined">Undefined</th>
+    <th class="total">Total</th>
+
+    <th class="passed">Passed</th>
+    <th class="failed">Failed</th>
+    <th class="total">Total</th>
+
+    <th>Duration</th>
+    <th>Status</th>
+  </tr>
+</thead>
+
+
+        <tbody>
+        <tr>
+          <td class="tagname">@Scenario-6</td>
+          <td      class="passed"    >14</td>
+          <td >0</td>
+          <td >0</td>
+          <td >0</td>
+          <td >0</td>
+          <td class="total">14</td>
+
+          <td  class="passed"    >5</td>
+          <td >0</td>
+          <td class="total">5</td>
+
+          <td class="duration" data-value="1504913400">1.504</td>
+          <td class="passed">Passed</td>
+        </tr>
+        </tbody>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-1 col-md-offset-10">
+      <i class="fa fa-chevron-circle-down fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('show')"></i>
+      <i class="fa fa-chevron-circle-up fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('hide')"></i>
+    </div>
+  </div>
+</div>
+
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <div class="elements">
+
+
+<div class="element">
+    <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_4_953706264.html">DummyJSON Products API - Query Parameters</a>
+    </div>
+
+
+<div class="tags indention">
+    <b>Tags:</b>
+       <a href="report-tag_1038329167.html">@dummyjson</a>
+       <a href="report-tag_3043924546.html">@functional</a>
+       <a href="report-tag_615905898.html">@query-params</a>
+       <a href="report-tag_2788516248.html">@Scenario-6</a>
+       <a href="report-tag_3182320184.html">@positive</a>
+</div>
+
+
+  <span class="lead-duration duration">0.324</span>
+
+
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-1">
+
+<div class="brief passed">
+  <span class="keyword indention">Scenario Outline</span>
+  <span class="name">GET products with different pagination parameters</span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-1" class="collapse collapsable-details ">
+
+
+  <div class="inner-level hooks-element-before">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#before-2">
+
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+    </div>
+
+    <div id="before-2" class="inner-level collapse collapsable-details ">
+        <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">Before</span>
+              <span class="location name">com.automationexercise.api.hooks.Hooks.setUp()</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+          </div>
+
+
+
+
+
+
+
+        </div>
+    </div>
+  </div>
+
+
+
+<div class="steps inner-level">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-3">
+
+<div class="brief passed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </div>
+
+  <div id="steps-3" class="inner-level collapse collapsable-details ">
+      <div class="step">
+
+
+<div class="brief step-name-When passed">
+  <span class="keyword indention">When</span>
+  <span class="name">user fetches products with limit <span class="argument">3</span> and skip <span class="argument">0</span></span>
+
+  <span class="lead-duration duration">0.266</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="inner-level hooks-step-after">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-4">
+
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+    </div>
+
+    <div id="after-4" class="inner-level collapse collapsable-details ">
+        <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">After</span>
+              <span class="location name">com.automationexercise.api.hooks.Hooks.logResponseToReport(io.cucumber.java.Scenario)</span>
+
+  <span class="lead-duration duration">0.002</span>
+
+          </div>
+
+
+
+
+
+
+  <div class="embeddings inner-level">
+  <div class="embedding indention">
+    <div data-toggle="collapse" data-target="#embedding-5" class="collapsable-control">
+      <a>API Response</a>
+      <a href="embeddings/embedding_-1692208510.txt" download target="_blank">
+        <span class="download-button glyphicon glyphicon-download-alt"></span>
+      </a>
+    </div>
+
+    <div id="embedding-5" class="collapse collapsable-details ">
+      <pre class="embedding-content">HTTP 200
+{
+    &quot;products&quot;: [
+        {
+            &quot;id&quot;: 1,
+            &quot;title&quot;: &quot;Essence Mascara Lash Princess&quot;,
+            &quot;description&quot;: &quot;The Essence Mascara Lash Princess is a popular mascara known for its volumizing and lengthening effects. Achieve dramatic lashes with this long-lasting and cruelty-free formula.&quot;,
+            &quot;category&quot;: &quot;beauty&quot;,
+            &quot;price&quot;: 9.99,
+            &quot;discountPercentage&quot;: 10.48,
+            &quot;rating&quot;: 2.56,
+            &quot;stock&quot;: 99,
+            &quot;tags&quot;: [
+                &quot;beauty&quot;,
+                &quot;mascara&quot;
+            ],
+            &quot;brand&quot;: &quot;Essence&quot;,
+            &quot;sku&quot;: &quot;BEA-ESS-ESS-001&quot;,
+            &quot;weight&quot;: 4,
+            &quot;dimensions&quot;: {
+                &quot;width&quot;: 15.14,
+                &quot;height&quot;: 13.08,
+                &quot;depth&quot;: 22.99
+            },
+            &quot;warrantyInformation&quot;: &quot;1 week warranty&quot;,
+            &quot;shippingInformation&quot;: &quot;Ships in 3-5 business days&quot;,
+            &quot;availabilityStatus&quot;: &quot;In Stock&quot;,
+            &quot;reviews&quot;: [
+                {
+                    &quot;rating&quot;: 3,
+                    &quot;comment&quot;: &quot;Would not recommend!&quot;,
+                    &quot;date&quot;: &quot;2025-04-30T09:41:02.053Z&quot;,
+                    &quot;reviewerName&quot;: &quot;Eleanor Collins&quot;,
+                    &quot;reviewerEmail&quot;: &quot;eleanor.collins@x.dummyjson.com&quot;
+                },
+                {
+                    &quot;rating&quot;: 4,
+                    &quot;comment&quot;: &quot;Very satisfied!&quot;,
+                    &quot;date&quot;: &quot;2025-04-30T09:41:02.053Z&quot;,
+                    &quot;reviewerName&quot;: &quot;Lucas Gordon&quot;,
+                    &quot;reviewerEmail&quot;: &quot;lucas.gordon@x.dummyjson.com&quot;
+                },
+                {
+                    &quot;rating&quot;: 5,
+                    &quot;comment&quot;: &quot;Highly impressed!&quot;,
+                    &quot;date&quot;: &quot;2025-04-30T09:41:02.053Z&quot;,
+                    &quot;reviewerName&quot;: &quot;Eleanor Collins&quot;,
+                    &quot;reviewerEmail&quot;: &quot;eleanor.collins@x.dummyjson.com&quot;
+                }
+            ],
+            &quot;returnPolicy&quot;: &quot;No return policy&quot;,
+            &quot;minimumOrderQuantity&quot;: 48,
+            &quot;meta&quot;: {
+                &quot;createdAt&quot;: &quot;2025-10-09T14:47:01.588Z&quot;,
+                &quot;updatedAt&quot;: &quot;2026-05-23T11:27:41.868Z&quot;,
+                &quot;barcode&quot;: &quot;5784719087687&quot;,
+                &quot;qrCode&quot;: &quot;https://cdn.dummyjson.com/public/qr-code.png&quot;
+            },
+            &quot;images&quot;: [
+                &quot;https://cdn.dummyjson.com/product-images/beauty/essence-mascara-lash-princess/1.webp&quot;
+            ],
+            &quot;thumbnail&quot;: &quot;https://cdn.dummyjson.com/product-images/beauty/essence-mascara-lash-princess/thumbnail.webp&quot;
+        },
+        {
+            &quot;id&quot;: 2,
+            &quot;title&quot;: &quot;Eyeshadow Palette with Mirror&quot;,
+            &quot;description&quot;: &quot;The Eyeshadow Palette with Mirror offers a versatile range of eyeshadow shades for creating stunning eye looks. With a built-in mirror, it's convenient for on-the-go makeup application.&quot;,
+            &quot;category&quot;: &quot;beauty&quot;,
+            &quot;price&quot;: 19.99,
+            &quot;discountPercentage&quot;: 18.19,
+            &quot;rating&quot;: 2.86,
+            &quot;stock&quot;: 34,
+            &quot;tags&quot;: [
+                &quot;beauty&quot;,
+                &quot;eyeshadow&quot;
+            ],
+            &quot;brand&quot;: &quot;Glamour Beauty&quot;,
+            &quot;sku&quot;: &quot;BEA-GLA-EYE-002&quot;,
+            &quot;weight&quot;: 9,
+            &quot;dimensions&quot;: {
+                &quot;width&quot;: 9.26,
+                &quot;height&quot;: 22.47,
+                &quot;depth&quot;: 27.67
+            },
+            &quot;warrantyInformation&quot;: &quot;1 year warranty&quot;,
+            &quot;shippingInformation&quot;: &quot;Ships in 2 weeks&quot;,
+            &quot;availabilityStatus&quot;: &quot;In Stock&quot;,
+            &quot;reviews&quot;: [
+                {
+                    &quot;rating&quot;: 5,
+                    &quot;comment&quot;: &quot;Great product!&quot;,
+                    &quot;date&quot;: &quot;2025-04-30T09:41:02.053Z&quot;,
+                    &quot;reviewerName&quot;: &quot;Savannah Gomez&quot;,
+                    &quot;reviewerEmail&quot;: &quot;savannah.gomez@x.dummyjson.com&quot;
+                },
+                {
+                    &quot;rating&quot;: 4,
+                    &quot;comment&quot;: &quot;Awesome product!&quot;,
+                    &quot;date&quot;: &quot;2025-04-30T09:41:02.053Z&quot;,
+                    &quot;reviewerName&quot;: &quot;Christian Perez&quot;,
+                    &quot;reviewerEmail&quot;: &quot;christian.perez@x.dummyjson.com&quot;
+                },
+                {
+                    &quot;rating&quot;: 1,
+                    &quot;comment&quot;: &quot;Poor quality!&quot;,
+                    &quot;date&quot;: &quot;2025-04-30T09:41:02.053Z&quot;,
+                    &quot;reviewerName&quot;: &quot;Nicholas Bailey&quot;,
+                    &quot;reviewerEmail&quot;: &quot;nicholas.bailey@x.dummyjson.com&quot;
+                }
+            ],
+            &quot;returnPolicy&quot;: &quot;7 days return policy&quot;,
+            &quot;minimumOrderQuantity&quot;: 20,
+            &quot;meta&quot;: {
+                &quot;createdAt&quot;: &quot;2024-12-03T11:29:45.706Z&quot;,
+                &quot;updatedAt&quot;: &quot;2025-08-24T16:52:47.806Z&quot;,
+                &quot;barcode&quot;: &quot;9170275171413&quot;,
+                &quot;qrCode&quot;: &quot;https://cdn.dummyjson.com/public/qr-code.png&quot;
+            },
+            &quot;images&quot;: [
+                &quot;https://cdn.dummyjson.com/product-images/beauty/eyeshadow-palette-with-mirror/1.webp&quot;
+            ],
+            &quot;thumbnail&quot;: &quot;https://cdn.dummyjson.com/product-images/beauty/eyeshadow-palette-with-mirror/thumbnail.webp&quot;
+        },
+        {
+            &quot;id&quot;: 3,
+            &quot;title&quot;: &quot;Powder Canister&quot;,
+            &quot;description&quot;: &quot;The Powder Canister is a finely milled setting powder designed to set makeup and control shine. With a lightweight and translucent formula, it provides a smooth and matte finish.&quot;,
+            &quot;category&quot;: &quot;beauty&quot;,
+            &quot;price&quot;: 14.99,
+            &quot;discountPercentage&quot;: 9.84,
+            &quot;rating&quot;: 4.64,
+            &quot;stock&quot;: 89,
+            &quot;tags&quot;: [
+                &quot;beauty&quot;,
+                &quot;face powder&quot;
+            ],
+            &quot;brand&quot;: &quot;Velvet Touch&quot;,
+            &quot;sku&quot;: &quot;BEA-VEL-POW-003&quot;,
+            &quot;weight&quot;: 8,
+            &quot;dimensions&quot;: {
+                &quot;width&quot;: 29.27,
+                &quot;height&quot;: 27.93,
+                &quot;depth&quot;: 20.59
+            },
+            &quot;warrantyInformation&quot;: &quot;3 months warranty&quot;,
+            &quot;shippingInformation&quot;: &quot;Ships in 1-2 business days&quot;,
+            &quot;availabilityStatus&quot;: &quot;In Stock&quot;,
+            &quot;reviews&quot;: [
+                {
+                    &quot;rating&quot;: 4,
+                    &quot;comment&quot;: &quot;Would buy again!&quot;,
+                    &quot;date&quot;: &quot;2025-04-30T09:41:02.053Z&quot;,
+                    &quot;reviewerName&quot;: &quot;Alexander Jones&quot;,
+                    &quot;reviewerEmail&quot;: &quot;alexander.jones@x.dummyjson.com&quot;
+                },
+                {
+                    &quot;rating&quot;: 5,
+                    &quot;comment&quot;: &quot;Highly impressed!&quot;,
+                    &quot;date&quot;: &quot;2025-04-30T09:41:02.053Z&quot;,
+                    &quot;reviewerName&quot;: &quot;Elijah Cruz&quot;,
+                    &quot;reviewerEmail&quot;: &quot;elijah.cruz@x.dummyjson.com&quot;
+                },
+                {
+                    &quot;rating&quot;: 1,
+                    &quot;comment&quot;: &quot;Very dissatisfied!&quot;,
+                    &quot;date&quot;: &quot;2025-04-30T09:41:02.053Z&quot;,
+                    &quot;reviewerName&quot;: &quot;Avery Perez&quot;,
+                    &quot;reviewerEmail&quot;: &quot;avery.perez@x.dummyjson.com&quot;
+                }
+            ],
+            &quot;returnPolicy&quot;: &quot;No return policy&quot;,
+            &quot;minimumOrderQuantity&quot;: 22,
+            &quot;meta&quot;: {
+                &quot;createdAt&quot;: &quot;2025-01-08T18:30:12.844Z&quot;,
+                &quot;updatedAt&quot;: &quot;2025-11-26T14:49:26.980Z&quot;,
+                &quot;barcode&quot;: &quot;8418883906837&quot;,
+                &quot;qrCode&quot;: &quot;https://cdn.dummyjson.com/public/qr-code.png&quot;
+            },
+            &quot;images&quot;: [
+                &quot;https://cdn.dummyjson.com/product-images/beauty/powder-canister/1.webp&quot;
+            ],
+            &quot;thumbnail&quot;: &quot;https://cdn.dummyjson.com/product-images/beauty/powder-canister/thumbnail.webp&quot;
+        }
+    ],
+    &quot;total&quot;: 194,
+    &quot;skip&quot;: 0,
+    &quot;limit&quot;: 3
+}</pre>
+    </div>
+  </div>
+  </div>
+
+        </div>
+    </div>
+  </div>
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">the HTTP status code should be <span class="argument">200</span></span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="inner-level hooks-step-after">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-6">
+
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+    </div>
+
+    <div id="after-6" class="inner-level collapse collapsable-details ">
+        <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">After</span>
+              <span class="location name">com.automationexercise.api.hooks.Hooks.logResponseToReport(io.cucumber.java.Scenario)</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+          </div>
+
+
+
+
+
+
+
+        </div>
+    </div>
+  </div>
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">the response should match the following assertions:</span>
+
+  <span class="lead-duration duration">0.058</span>
+
+</div>
+
+
+
+
+
+
+
+          <table class="step-arguments">
+              <tr>
+                  <td>field</td>
+                  <td>matcher</td>
+                  <td>value</td>
+              </tr>
+              <tr>
+                  <td>products</td>
+                  <td>listSize</td>
+                  <td>3</td>
+              </tr>
+              <tr>
+                  <td>skip</td>
+                  <td>equalToInt</td>
+                  <td>0</td>
+              </tr>
+              <tr>
+                  <td>limit</td>
+                  <td>equalToInt</td>
+                  <td>3</td>
+              </tr>
+          </table>
+
+
+
+
+
+
+
+
+  <div class="inner-level hooks-step-after">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-7">
+
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+    </div>
+
+    <div id="after-7" class="inner-level collapse collapsable-details ">
+        <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">After</span>
+              <span class="location name">com.automationexercise.api.hooks.Hooks.logResponseToReport(io.cucumber.java.Scenario)</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+          </div>
+
+
+
+
+
+
+
+        </div>
+    </div>
+  </div>
+
+      </div>
+  </div>
+</div>
+
+
+
+
+
+  </div>
+</div>
+
+
+<div class="element">
+    <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_4_953706264.html">DummyJSON Products API - Query Parameters</a>
+    </div>
+
+
+<div class="tags indention">
+    <b>Tags:</b>
+       <a href="report-tag_1038329167.html">@dummyjson</a>
+       <a href="report-tag_3043924546.html">@functional</a>
+       <a href="report-tag_615905898.html">@query-params</a>
+       <a href="report-tag_2788516248.html">@Scenario-6</a>
+       <a href="report-tag_3182320184.html">@positive</a>
+</div>
+
+
+  <span class="lead-duration duration">0.297</span>
+
+
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-8">
+
+<div class="brief passed">
+  <span class="keyword indention">Scenario Outline</span>
+  <span class="name">GET products with different pagination parameters</span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-8" class="collapse collapsable-details ">
+
+
+  <div class="inner-level hooks-element-before">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#before-9">
+
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+    </div>
+
+    <div id="before-9" class="inner-level collapse collapsable-details ">
+        <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">Before</span>
+              <span class="location name">com.automationexercise.api.hooks.Hooks.setUp()</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+          </div>
+
+
+
+
+
+
+
+        </div>
+    </div>
+  </div>
+
+
+
+<div class="steps inner-level">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-10">
+
+<div class="brief passed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </div>
+
+  <div id="steps-10" class="inner-level collapse collapsable-details ">
+      <div class="step">
+
+
+<div class="brief step-name-When passed">
+  <span class="keyword indention">When</span>
+  <span class="name">user fetches products with limit <span class="argument">5</span> and skip <span class="argument">10</span></span>
+
+  <span class="lead-duration duration">0.212</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="inner-level hooks-step-after">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-11">
+
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+    </div>
+
+    <div id="after-11" class="inner-level collapse collapsable-details ">
+        <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">After</span>
+              <span class="location name">com.automationexercise.api.hooks.Hooks.logResponseToReport(io.cucumber.java.Scenario)</span>
+
+  <span class="lead-duration duration">0.002</span>
+
+          </div>
+
+
+
+
+
+
+  <div class="embeddings inner-level">
+  <div class="embedding indention">
+    <div data-toggle="collapse" data-target="#embedding-12" class="collapsable-control">
+      <a>API Response</a>
+      <a href="embeddings/embedding_-789519098.txt" download target="_blank">
+        <span class="download-button glyphicon glyphicon-download-alt"></span>
+      </a>
+    </div>
+
+    <div id="embedding-12" class="collapse collapsable-details ">
+      <pre class="embedding-content">HTTP 200
+{
+    &quot;products&quot;: [
+        {
+            &quot;id&quot;: 11,
+            &quot;title&quot;: &quot;Annibale Colombo Bed&quot;,
+            &quot;description&quot;: &quot;The Annibale Colombo Bed is a luxurious and elegant bed frame, crafted with high-quality materials for a comfortable and stylish bedroom.&quot;,
+            &quot;category&quot;: &quot;furniture&quot;,
+            &quot;price&quot;: 1899.99,
+            &quot;discountPercentage&quot;: 8.57,
+            &quot;rating&quot;: 4.77,
+            &quot;stock&quot;: 88,
+            &quot;tags&quot;: [
+                &quot;furniture&quot;,
+                &quot;beds&quot;
+            ],
+            &quot;brand&quot;: &quot;Annibale Colombo&quot;,
+            &quot;sku&quot;: &quot;FUR-ANN-ANN-011&quot;,
+            &quot;weight&quot;: 10,
+            &quot;dimensions&quot;: {
+                &quot;width&quot;: 28.16,
+                &quot;height&quot;: 25.36,
+                &quot;depth&quot;: 17.28
+            },
+            &quot;warrantyInformation&quot;: &quot;1 year warranty&quot;,
+            &quot;shippingInformation&quot;: &quot;Ships in 1 month&quot;,
+            &quot;availabilityStatus&quot;: &quot;In Stock&quot;,
+            &quot;reviews&quot;: [
+                {
+                    &quot;rating&quot;: 2,
+                    &quot;comment&quot;: &quot;Would not recommend!&quot;,
+                    &quot;date&quot;: &quot;2025-04-30T09:41:02.053Z&quot;,
+                    &quot;reviewerName&quot;: &quot;Christopher West&quot;,
+                    &quot;reviewerEmail&quot;: &quot;christopher.west@x.dummyjson.com&quot;
+                },
+                {
+                    &quot;rating&quot;: 4,
+                    &quot;comment&quot;: &quot;Highly impressed!&quot;,
+                    &quot;date&quot;: &quot;2025-04-30T09:41:02.053Z&quot;,
+                    &quot;reviewerName&quot;: &quot;Vivian Carter&quot;,
+                    &quot;reviewerEmail&quot;: &quot;vivian.carter@x.dummyjson.com&quot;
+                },
+                {
+                    &quot;rating&quot;: 1,
+                    &quot;comment&quot;: &quot;Poor quality!&quot;,
+                    &quot;date&quot;: &quot;2025-04-30T09:41:02.053Z&quot;,
+                    &quot;reviewerName&quot;: &quot;Mason Wright&quot;,
+                    &quot;reviewerEmail&quot;: &quot;mason.wright@x.dummyjson.com&quot;
+                }
+            ],
+            &quot;returnPolicy&quot;: &quot;No return policy&quot;,
+            &quot;minimumOrderQuantity&quot;: 1,
+            &quot;meta&quot;: {
+                &quot;createdAt&quot;: &quot;2026-05-31T06:08:47.181Z&quot;,
+                &quot;updatedAt&quot;: &quot;2026-06-02T19:49:21.474Z&quot;,
+                &quot;barcode&quot;: &quot;3610757456581&quot;,
+                &quot;qrCode&quot;: &quot;https://cdn.dummyjson.com/public/qr-code.png&quot;
+            },
+            &quot;images&quot;: [
+                &quot;https://cdn.dummyjson.com/product-images/furniture/annibale-colombo-bed/1.webp&quot;,
+                &quot;https://cdn.dummyjson.com/product-images/furniture/annibale-colombo-bed/2.webp&quot;,
+                &quot;https://cdn.dummyjson.com/product-images/furniture/annibale-colombo-bed/3.webp&quot;
+            ],
+            &quot;thumbnail&quot;: &quot;https://cdn.dummyjson.com/product-images/furniture/annibale-colombo-bed/thumbnail.webp&quot;
+        },
+        {
+            &quot;id&quot;: 12,
+            &quot;title&quot;: &quot;Annibale Colombo Sofa&quot;,
+            &quot;description&quot;: &quot;The Annibale Colombo Sofa is a sophisticated and comfortable seating option, featuring exquisite design and premium upholstery for your living room.&quot;,
+            &quot;category&quot;: &quot;furniture&quot;,
+            &quot;price&quot;: 2499.99,
+            &quot;discountPercentage&quot;: 14.4,
+            &quot;rating&quot;: 3.92,
+            &quot;stock&quot;: 60,
+            &quot;tags&quot;: [
+                &quot;furniture&quot;,
+                &quot;sofas&quot;
+            ],
+            &quot;brand&quot;: &quot;Annibale Colombo&quot;,
+            &quot;sku&quot;: &quot;FUR-ANN-ANN-012&quot;,
+            &quot;weight&quot;: 6,
+            &quot;dimensions&quot;: {
+                &quot;width&quot;: 12.75,
+                &quot;height&quot;: 20.55,
+                &quot;depth&quot;: 19.06
+            },
+            &quot;warrantyInformation&quot;: &quot;Lifetime warranty&quot;,
+            &quot;shippingInformation&quot;: &quot;Ships in 1 week&quot;,
+            &quot;availabilityStatus&quot;: &quot;In Stock&quot;,
+            &quot;reviews&quot;: [
+                {
+                    &quot;rating&quot;: 3,
+                    &quot;comment&quot;: &quot;Very unhappy with my purchase!&quot;,
+                    &quot;date&quot;: &quot;2025-04-30T09:41:02.053Z&quot;,
+                    &quot;reviewerName&quot;: &quot;Christian Perez&quot;,
+                    &quot;reviewerEmail&quot;: &quot;christian.perez@x.dummyjson.com&quot;
+                },
+                {
+                    &quot;rating&quot;: 5,
+                    &quot;comment&quot;: &quot;Fast shipping!&quot;,
+                    &quot;date&quot;: &quot;2025-04-30T09:41:02.053Z&quot;,
+                    &quot;reviewerName&quot;: &quot;Lillian Bishop&quot;,
+                    &quot;reviewerEmail&quot;: &quot;lillian.bishop@x.dummyjson.com&quot;
+                },
+                {
+                    &quot;rating&quot;: 1,
+                    &quot;comment&quot;: &quot;Poor quality!&quot;,
+                    &quot;date&quot;: &quot;2025-04-30T09:41:02.053Z&quot;,
+                    &quot;reviewerName&quot;: &quot;Lillian Simmons&quot;,
+                    &quot;reviewerEmail&quot;: &quot;lillian.simmons@x.dummyjson.com&quot;
+                }
+            ],
+            &quot;returnPolicy&quot;: &quot;7 days return policy&quot;,
+            &quot;minimumOrderQuantity&quot;: 1,
+            &quot;meta&quot;: {
+                &quot;createdAt&quot;: &quot;2024-10-15T17:11:42.387Z&quot;,
+                &quot;updatedAt&quot;: &quot;2025-05-26T20:53:48.329Z&quot;,
+                &quot;barcode&quot;: &quot;1777662847736&quot;,
+                &quot;qrCode&quot;: &quot;https://cdn.dummyjson.com/public/qr-code.png&quot;
+            },
+            &quot;images&quot;: [
+                &quot;https://cdn.dummyjson.com/product-images/furniture/annibale-colombo-sofa/1.webp&quot;,
+                &quot;https://cdn.dummyjson.com/product-images/furniture/annibale-colombo-sofa/2.webp&quot;,
+                &quot;https://cdn.dummyjson.com/product-images/furniture/annibale-colombo-sofa/3.webp&quot;
+            ],
+            &quot;thumbnail&quot;: &quot;https://cdn.dummyjson.com/product-images/furniture/annibale-colombo-sofa/thumbnail.webp&quot;
+        },
+        {
+            &quot;id&quot;: 13,
+            &quot;title&quot;: &quot;Bedside Table African Cherry&quot;,
+            &quot;description&quot;: &quot;The Bedside Table in African Cherry is a stylish and functional addition to your bedroom, providing convenient storage space and a touch of elegance.&quot;,
+            &quot;category&quot;: &quot;furniture&quot;,
+            &quot;price&quot;: 299.99,
+            &quot;discountPercentage&quot;: 19.09,
+            &quot;rating&quot;: 2.87,
+            &quot;stock&quot;: 64,
+            &quot;tags&quot;: [
+                &quot;furniture&quot;,
+                &quot;bedside tables&quot;
+            ],
+            &quot;brand&quot;: &quot;Furniture Co.&quot;,
+            &quot;sku&quot;: &quot;FUR-FUR-BED-013&quot;,
+            &quot;weight&quot;: 2,
+            &quot;dimensions&quot;: {
+                &quot;width&quot;: 13.47,
+                &quot;height&quot;: 24.99,
+                &quot;depth&quot;: 27.35
+            },
+            &quot;warrantyInformation&quot;: &quot;5 year warranty&quot;,
+            &quot;shippingInformation&quot;: &quot;Ships overnight&quot;,
+            &quot;availabilityStatus&quot;: &quot;In Stock&quot;,
+            &quot;reviews&quot;: [
+                {
+                    &quot;rating&quot;: 4,
+                    &quot;comment&quot;: &quot;Excellent quality!&quot;,
+                    &quot;date&quot;: &quot;2025-04-30T09:41:02.053Z&quot;,
+                    &quot;reviewerName&quot;: &quot;Aaliyah Hanson&quot;,
+                    &quot;reviewerEmail&quot;: &quot;aaliyah.hanson@x.dummyjson.com&quot;
+                },
+                {
+                    &quot;rating&quot;: 4,
+                    &quot;comment&quot;: &quot;Excellent quality!&quot;,
+                    &quot;date&quot;: &quot;2025-04-30T09:41:02.053Z&quot;,
+                    &quot;reviewerName&quot;: &quot;Liam Smith&quot;,
+                    &quot;reviewerEmail&quot;: &quot;liam.smith@x.dummyjson.com&quot;
+                },
+                {
+                    &quot;rating&quot;: 4,
+                    &quot;comment&quot;: &quot;Highly recommended!&quot;,
+                    &quot;date&quot;: &quot;2025-04-30T09:41:02.053Z&quot;,
+                    &quot;reviewerName&quot;: &quot;Avery Barnes&quot;,
+                    &quot;reviewerEmail&quot;: &quot;avery.barnes@x.dummyjson.com&quot;
+                }
+            ],
+            &quot;returnPolicy&quot;: &quot;7 days return policy&quot;,
+            &quot;minimumOrderQuantity&quot;: 3,
+            &quot;meta&quot;: {
+                &quot;createdAt&quot;: &quot;2025-01-02T18:14:51.517Z&quot;,
+                &quot;updatedAt&quot;: &quot;2025-11-03T04:42:17.912Z&quot;,
+                &quot;barcode&quot;: &quot;6441287925979&quot;,
+                &quot;qrCode&quot;: &quot;https://cdn.dummyjson.com/public/qr-code.png&quot;
+            },
+            &quot;images&quot;: [
+                &quot;https://cdn.dummyjson.com/product-images/furniture/bedside-table-african-cherry/1.webp&quot;,
+                &quot;https://cdn.dummyjson.com/product-images/furniture/bedside-table-african-cherry/2.webp&quot;,
+                &quot;https://cdn.dummyjson.com/product-images/furniture/bedside-table-african-cherry/3.webp&quot;
+            ],
+            &quot;thumbnail&quot;: &quot;https://cdn.dummyjson.com/product-images/furniture/bedside-table-african-cherry/thumbnail.webp&quot;
+        },
+        {
+            &quot;id&quot;: 14,
+            &quot;title&quot;: &quot;Knoll Saarinen Executive Conference Chair&quot;,
+            &quot;description&quot;: &quot;The Knoll Saarinen Executive Conference Chair is a modern and ergonomic chair, perfect for your office or conference room with its timeless design.&quot;,
+            &quot;category&quot;: &quot;furniture&quot;,
+            &quot;price&quot;: 499.99,
+            &quot;discountPercentage&quot;: 2.01,
+            &quot;rating&quot;: 4.88,
+            &quot;stock&quot;: 26,
+            &quot;tags&quot;: [
+                &quot;furniture&quot;,
+                &quot;office chairs&quot;
+            ],
+            &quot;brand&quot;: &quot;Knoll&quot;,
+            &quot;sku&quot;: &quot;FUR-KNO-KNO-014&quot;,
+            &quot;weight&quot;: 10,
+            &quot;dimensions&quot;: {
+                &quot;width&quot;: 13.81,
+                &quot;height&quot;: 7.5,
+                &quot;depth&quot;: 5.62
+            },
+            &quot;warrantyInformation&quot;: &quot;2 year warranty&quot;,
+            &quot;shippingInformation&quot;: &quot;Ships overnight&quot;,
+            &quot;availabilityStatus&quot;: &quot;In Stock&quot;,
+            &quot;reviews&quot;: [
+                {
+                    &quot;rating&quot;: 2,
+                    &quot;comment&quot;: &quot;Waste of money!&quot;,
+                    &quot;date&quot;: &quot;2025-04-30T09:41:02.053Z&quot;,
+                    &quot;reviewerName&quot;: &quot;Ella Cook&quot;,
+                    &quot;reviewerEmail&quot;: &quot;ella.cook@x.dummyjson.com&quot;
+                },
+                {
+                    &quot;rating&quot;: 2,
+                    &quot;comment&quot;: &quot;Very dissatisfied!&quot;,
+                    &quot;date&quot;: &quot;2025-04-30T09:41:02.053Z&quot;,
+                    &quot;reviewerName&quot;: &quot;Clara Berry&quot;,
+                    &quot;reviewerEmail&quot;: &quot;clara.berry@x.dummyjson.com&quot;
+                },
+                {
+                    &quot;rating&quot;: 5,
+                    &quot;comment&quot;: &quot;Would buy again!&quot;,
+                    &quot;date&quot;: &quot;2025-04-30T09:41:02.053Z&quot;,
+                    &quot;reviewerName&quot;: &quot;Elena Long&quot;,
+                    &quot;reviewerEmail&quot;: &quot;elena.long@x.dummyjson.com&quot;
+                }
+            ],
+            &quot;returnPolicy&quot;: &quot;60 days return policy&quot;,
+            &quot;minimumOrderQuantity&quot;: 5,
+            &quot;meta&quot;: {
+                &quot;createdAt&quot;: &quot;2025-07-05T18:32:17.642Z&quot;,
+                &quot;updatedAt&quot;: &quot;2025-09-13T11:11:13.923Z&quot;,
+                &quot;barcode&quot;: &quot;8919386859966&quot;,
+                &quot;qrCode&quot;: &quot;https://cdn.dummyjson.com/public/qr-code.png&quot;
+            },
+            &quot;images&quot;: [
+                &quot;https://cdn.dummyjson.com/product-images/furniture/knoll-saarinen-executive-conference-chair/1.webp&quot;,
+                &quot;https://cdn.dummyjson.com/product-images/furniture/knoll-saarinen-executive-conference-chair/2.webp&quot;,
+                &quot;https://cdn.dummyjson.com/product-images/furniture/knoll-saarinen-executive-conference-chair/3.webp&quot;
+            ],
+            &quot;thumbnail&quot;: &quot;https://cdn.dummyjson.com/product-images/furniture/knoll-saarinen-executive-conference-chair/thumbnail.webp&quot;
+        },
+        {
+            &quot;id&quot;: 15,
+            &quot;title&quot;: &quot;Wooden Bathroom Sink With Mirror&quot;,
+            &quot;description&quot;: &quot;The Wooden Bathroom Sink with Mirror is a unique and stylish addition to your bathroom, featuring a wooden sink countertop and a matching mirror.&quot;,
+            &quot;category&quot;: &quot;furniture&quot;,
+            &quot;price&quot;: 799.99,
+            &quot;discountPercentage&quot;: 8.8,
+            &quot;rating&quot;: 3.59,
+            &quot;stock&quot;: 7,
+            &quot;tags&quot;: [
+                &quot;furniture&quot;,
+                &quot;bathroom&quot;
+            ],
+            &quot;brand&quot;: &quot;Bath Trends&quot;,
+            &quot;sku&quot;: &quot;FUR-BAT-WOO-015&quot;,
+            &quot;weight&quot;: 10,
+            &quot;dimensions&quot;: {
+                &quot;width&quot;: 7.98,
+                &quot;height&quot;: 8.88,
+                &quot;depth&quot;: 28.46
+            },
+            &quot;warrantyInformation&quot;: &quot;3 year warranty&quot;,
+            &quot;shippingInformation&quot;: &quot;Ships in 3-5 business days&quot;,
+            &quot;availabilityStatus&quot;: &quot;Low Stock&quot;,
+            &quot;reviews&quot;: [
+                {
+                    &quot;rating&quot;: 4,
+                    &quot;comment&quot;: &quot;Fast shipping!&quot;,
+                    &quot;date&quot;: &quot;2025-04-30T09:41:02.053Z&quot;,
+                    &quot;reviewerName&quot;: &quot;Logan Torres&quot;,
+                    &quot;reviewerEmail&quot;: &quot;logan.torres@x.dummyjson.com&quot;
+                },
+                {
+                    &quot;rating&quot;: 5,
+                    &quot;comment&quot;: &quot;Very pleased!&quot;,
+                    &quot;date&quot;: &quot;2025-04-30T09:41:02.053Z&quot;,
+                    &quot;reviewerName&quot;: &quot;Aria Parker&quot;,
+                    &quot;reviewerEmail&quot;: &quot;aria.parker@x.dummyjson.com&quot;
+                },
+                {
+                    &quot;rating&quot;: 3,
+                    &quot;comment&quot;: &quot;Poor quality!&quot;,
+                    &quot;date&quot;: &quot;2025-04-30T09:41:02.053Z&quot;,
+                    &quot;reviewerName&quot;: &quot;Dylan Wells&quot;,
+                    &quot;reviewerEmail&quot;: &quot;dylan.wells@x.dummyjson.com&quot;
+                }
+            ],
+            &quot;returnPolicy&quot;: &quot;60 days return policy&quot;,
+            &quot;minimumOrderQuantity&quot;: 2,
+            &quot;meta&quot;: {
+                &quot;createdAt&quot;: &quot;2024-10-08T09:12:20.659Z&quot;,
+                &quot;updatedAt&quot;: &quot;2026-08-22T08:09:35.091Z&quot;,
+                &quot;barcode&quot;: &quot;1958104402873&quot;,
+                &quot;qrCode&quot;: &quot;https://cdn.dummyjson.com/public/qr-code.png&quot;
+            },
+            &quot;images&quot;: [
+                &quot;https://cdn.dummyjson.com/product-images/furniture/wooden-bathroom-sink-with-mirror/1.webp&quot;,
+                &quot;https://cdn.dummyjson.com/product-images/furniture/wooden-bathroom-sink-with-mirror/2.webp&quot;,
+                &quot;https://cdn.dummyjson.com/product-images/furniture/wooden-bathroom-sink-with-mirror/3.webp&quot;
+            ],
+            &quot;thumbnail&quot;: &quot;https://cdn.dummyjson.com/product-images/furniture/wooden-bathroom-sink-with-mirror/thumbnail.webp&quot;
+        }
+    ],
+    &quot;total&quot;: 194,
+    &quot;skip&quot;: 10,
+    &quot;limit&quot;: 5
+}</pre>
+    </div>
+  </div>
+  </div>
+
+        </div>
+    </div>
+  </div>
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">the HTTP status code should be <span class="argument">200</span></span>
+
+  <span class="lead-duration duration">0.001</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="inner-level hooks-step-after">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-13">
+
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+    </div>
+
+    <div id="after-13" class="inner-level collapse collapsable-details ">
+        <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">After</span>
+              <span class="location name">com.automationexercise.api.hooks.Hooks.logResponseToReport(io.cucumber.java.Scenario)</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+          </div>
+
+
+
+
+
+
+
+        </div>
+    </div>
+  </div>
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">the response should match the following assertions:</span>
+
+  <span class="lead-duration duration">0.084</span>
+
+</div>
+
+
+
+
+
+
+
+          <table class="step-arguments">
+              <tr>
+                  <td>field</td>
+                  <td>matcher</td>
+                  <td>value</td>
+              </tr>
+              <tr>
+                  <td>products</td>
+                  <td>listSize</td>
+                  <td>5</td>
+              </tr>
+              <tr>
+                  <td>skip</td>
+                  <td>equalToInt</td>
+                  <td>10</td>
+              </tr>
+              <tr>
+                  <td>limit</td>
+                  <td>equalToInt</td>
+                  <td>5</td>
+              </tr>
+          </table>
+
+
+
+
+
+
+
+
+  <div class="inner-level hooks-step-after">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-14">
+
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+    </div>
+
+    <div id="after-14" class="inner-level collapse collapsable-details ">
+        <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">After</span>
+              <span class="location name">com.automationexercise.api.hooks.Hooks.logResponseToReport(io.cucumber.java.Scenario)</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+          </div>
+
+
+
+
+
+
+
+        </div>
+    </div>
+  </div>
+
+      </div>
+  </div>
+</div>
+
+
+
+
+
+  </div>
+</div>
+
+
+<div class="element">
+    <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_4_953706264.html">DummyJSON Products API - Query Parameters</a>
+    </div>
+
+
+<div class="tags indention">
+    <b>Tags:</b>
+       <a href="report-tag_1038329167.html">@dummyjson</a>
+       <a href="report-tag_3043924546.html">@functional</a>
+       <a href="report-tag_615905898.html">@query-params</a>
+       <a href="report-tag_2788516248.html">@Scenario-6</a>
+       <a href="report-tag_3182320184.html">@positive</a>
+</div>
+
+
+  <span class="lead-duration duration">0.322</span>
+
+
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-15">
+
+<div class="brief passed">
+  <span class="keyword indention">Scenario Outline</span>
+  <span class="name">GET products with different pagination parameters</span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-15" class="collapse collapsable-details ">
+
+
+  <div class="inner-level hooks-element-before">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#before-16">
+
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+    </div>
+
+    <div id="before-16" class="inner-level collapse collapsable-details ">
+        <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">Before</span>
+              <span class="location name">com.automationexercise.api.hooks.Hooks.setUp()</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+          </div>
+
+
+
+
+
+
+
+        </div>
+    </div>
+  </div>
+
+
+
+<div class="steps inner-level">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-17">
+
+<div class="brief passed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </div>
+
+  <div id="steps-17" class="inner-level collapse collapsable-details ">
+      <div class="step">
+
+
+<div class="brief step-name-When passed">
+  <span class="keyword indention">When</span>
+  <span class="name">user fetches products with limit <span class="argument">10</span> and skip <span class="argument">20</span></span>
+
+  <span class="lead-duration duration">0.262</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="inner-level hooks-step-after">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-18">
+
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+    </div>
+
+    <div id="after-18" class="inner-level collapse collapsable-details ">
+        <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">After</span>
+              <span class="location name">com.automationexercise.api.hooks.Hooks.logResponseToReport(io.cucumber.java.Scenario)</span>
+
+  <span class="lead-duration duration">0.003</span>
+
+          </div>
+
+
+
+
+
+
+  <div class="embeddings inner-level">
+  <div class="embedding indention">
+    <div data-toggle="collapse" data-target="#embedding-19" class="collapsable-control">
+      <a>API Response</a>
+      <a href="embeddings/embedding_1579671500.txt" download target="_blank">
+        <span class="download-button glyphicon glyphicon-download-alt"></span>
+      </a>
+    </div>
+
+    <div id="embedding-19" class="collapse collapsable-details ">
+      <pre class="embedding-content">HTTP 200
+{
+    &quot;products&quot;: [
+        {
+            &quot;id&quot;: 21,
+            &quot;title&quot;: &quot;Cucumber&quot;,
+            &quot;description&quot;: &quot;Crisp and hydrating cucumbers, ideal for salads, snacks, or as a refreshing side.&quot;,
+            &quot;category&quot;: &quot;groceries&quot;,
+            &quot;price&quot;: 1.49,
+            &quot;discountPercentage&quot;: 0.16,
+            &quot;rating&quot;: 4.07,
+            &quot;stock&quot;: 84,
+            &quot;tags&quot;: [
+                &quot;vegetables&quot;
+            ],
+            &quot;sku&quot;: &quot;GRO-BRD-CUC-021&quot;,
+            &quot;weight&quot;: 4,
+            &quot;dimensions&quot;: {
+                &quot;width&quot;: 12.8,
+                &quot;height&quot;: 28.38,
+                &quot;depth&quot;: 21.34
+            },
+            &quot;warrantyInformation&quot;: &quot;2 year warranty&quot;,
+            &quot;shippingInformation&quot;: &quot;Ships in 1-2 business days&quot;,
+            &quot;availabilityStatus&quot;: &quot;In Stock&quot;,
+            &quot;reviews&quot;: [
+                {
+                    &quot;rating&quot;: 4,
+                    &quot;comment&quot;: &quot;Great product!&quot;,
+                    &quot;date&quot;: &quot;2025-04-30T09:41:02.053Z&quot;,
+                    &quot;reviewerName&quot;: &quot;Lincoln Kelly&quot;,
+                    &quot;reviewerEmail&quot;: &quot;lincoln.kelly@x.dummyjson.com&quot;
+                },
+                {
+                    &quot;rating&quot;: 4,
+                    &quot;comment&quot;: &quot;Great value for money!&quot;,
+                    &quot;date&quot;: &quot;2025-04-30T09:41:02.053Z&quot;,
+                    &quot;reviewerName&quot;: &quot;Savannah Gomez&quot;,
+                    &quot;reviewerEmail&quot;: &quot;savannah.gomez@x.dummyjson.com&quot;
+                },
+                {
+                    &quot;rating&quot;: 2,
+                    &quot;comment&quot;: &quot;Poor quality!&quot;,
+                    &quot;date&quot;: &quot;2025-04-30T09:41:02.053Z&quot;,
+                    &quot;reviewerName&quot;: &quot;James Davis&quot;,
+                    &quot;reviewerEmail&quot;: &quot;james.davis@x.dummyjson.com&quot;
+                }
+            ],
+            &quot;returnPolicy&quot;: &quot;7 days return policy&quot;,
+            &quot;minimumOrderQuantity&quot;: 2,
+            &quot;meta&quot;: {
+                &quot;createdAt&quot;: &quot;2025-01-12T11:53:56.805Z&quot;,
+                &quot;updatedAt&quot;: &quot;2025-03-07T00:03:35.835Z&quot;,
+                &quot;barcode&quot;: &quot;5300066378225&quot;,
+                &quot;qrCode&quot;: &quot;https://cdn.dummyjson.com/public/qr-code.png&quot;
+            },
+            &quot;images&quot;: [
+                &quot;https://cdn.dummyjson.com/product-images/groceries/cucumber/1.webp&quot;
+            ],
+            &quot;thumbnail&quot;: &quot;https://cdn.dummyjson.com/product-images/groceries/cucumber/thumbnail.webp&quot;
+        },
+        {
+            &quot;id&quot;: 22,
+            &quot;title&quot;: &quot;Dog Food&quot;,
+            &quot;description&quot;: &quot;Specially formulated dog food designed to provide essential nutrients for your canine companion.&quot;,
+            &quot;category&quot;: &quot;groceries&quot;,
+            &quot;price&quot;: 10.99,
+            &quot;discountPercentage&quot;: 10.27,
+            &quot;rating&quot;: 4.55,
+            &quot;stock&quot;: 71,
+            &quot;tags&quot;: [
+                &quot;pet supplies&quot;,
+                &quot;dog food&quot;
+            ],
+            &quot;sku&quot;: &quot;GRO-BRD-FOO-022&quot;,
+            &quot;weight&quot;: 10,
+            &quot;dimensions&quot;: {
+                &quot;width&quot;: 16.93,
+                &quot;height&quot;: 27.15,
+                &quot;depth&quot;: 9.29
+            },
+            &quot;warrantyInformation&quot;: &quot;No warranty&quot;,
+            &quot;shippingInformation&quot;: &quot;Ships in 1-2 business days&quot;,
+            &quot;availabilityStatus&quot;: &quot;In Stock&quot;,
+            &quot;reviews&quot;: [
+                {
+                    &quot;rating&quot;: 5,
+                    &quot;comment&quot;: &quot;Excellent quality!&quot;,
+                    &quot;date&quot;: &quot;2025-04-30T09:41:02.053Z&quot;,
+                    &quot;reviewerName&quot;: &quot;Nicholas Edwards&quot;,
+                    &quot;reviewerEmail&quot;: &quot;nicholas.edwards@x.dummyjson.com&quot;
+                },
+                {
+                    &quot;rating&quot;: 5,
+                    &quot;comment&quot;: &quot;Awesome product!&quot;,
+                    &quot;date&quot;: &quot;2025-04-30T09:41:02.053Z&quot;,
+                    &quot;reviewerName&quot;: &quot;Zachary Lee&quot;,
+                    &quot;reviewerEmail&quot;: &quot;zachary.lee@x.dummyjson.com&quot;
+                },
+                {
+                    &quot;rating&quot;: 4,
+                    &quot;comment&quot;: &quot;Great product!&quot;,
+                    &quot;date&quot;: &quot;2025-04-30T09:41:02.053Z&quot;,
+                    &quot;reviewerName&quot;: &quot;Nova Cooper&quot;,
+                    &quot;reviewerEmail&quot;: &quot;nova.cooper@x.dummyjson.com&quot;
+                }
+            ],
+            &quot;returnPolicy&quot;: &quot;60 days return policy&quot;,
+            &quot;minimumOrderQuantity&quot;: 43,
+            &quot;meta&quot;: {
+                &quot;createdAt&quot;: &quot;2025-07-10T03:33:14.471Z&quot;,
+                &quot;updatedAt&quot;: &quot;2026-05-15T13:09:53.695Z&quot;,
+                &quot;barcode&quot;: &quot;5906686116469&quot;,
+                &quot;qrCode&quot;: &quot;https://cdn.dummyjson.com/public/qr-code.png&quot;
+            },
+            &quot;images&quot;: [
+                &quot;https://cdn.dummyjson.com/product-images/groceries/dog-food/1.webp&quot;
+            ],
+            &quot;thumbnail&quot;: &quot;https://cdn.dummyjson.com/product-images/groceries/dog-food/thumbnail.webp&quot;
+        },
+        {
+            &quot;id&quot;: 23,
+            &quot;title&quot;: &quot;Eggs&quot;,
+            &quot;description&quot;: &quot;Fresh eggs, a versatile ingredient for baking, cooking, or breakfast.&quot;,
+            &quot;category&quot;: &quot;groceries&quot;,
+            &quot;price&quot;: 2.99,
+            &quot;discountPercentage&quot;: 11.05,
+            &quot;rating&quot;: 2.53,
+            &quot;stock&quot;: 9,
+            &quot;tags&quot;: [
+                &quot;dairy&quot;
+            ],
+            &quot;sku&quot;: &quot;GRO-BRD-EGG-023&quot;,
+            &quot;weight&quot;: 2,
+            &quot;dimensions&quot;: {
+                &quot;width&quot;: 11.42,
+                &quot;height&quot;: 7.44,
+                &quot;depth&quot;: 16.95
+            },
+            &quot;warrantyInformation&quot;: &quot;1 week warranty&quot;,
+            &quot;shippingInformation&quot;: &quot;Ships in 1 week&quot;,
+            &quot;availabilityStatus&quot;: &quot;In Stock&quot;,
+            &quot;reviews&quot;: [
+                {
+                    &quot;rating&quot;: 3,
+                    &quot;comment&quot;: &quot;Disappointing product!&quot;,
+                    &quot;date&quot;: &quot;2025-04-30T09:41:02.053Z&quot;,
+                    &quot;reviewerName&quot;: &quot;Penelope King&quot;,
+                    &quot;reviewerEmail&quot;: &quot;penelope.king@x.dummyjson.com&quot;
+                },
+                {
+                    &quot;rating&quot;: 3,
+                    &quot;comment&quot;: &quot;Poor quality!&quot;,
+                    &quot;date&quot;: &quot;2025-04-30T09:41:02.053Z&quot;,
+                    &quot;reviewerName&quot;: &quot;Eleanor Tyler&quot;,
+                    &quot;reviewerEmail&quot;: &quot;eleanor.tyler@x.dummyjson.com&quot;
+                },
+                {
+                    &quot;rating&quot;: 4,
+                    &quot;comment&quot;: &quot;Very pleased!&quot;,
+                    &quot;date&quot;: &quot;2025-04-30T09:41:02.053Z&quot;,
+                    &quot;reviewerName&quot;: &quot;Benjamin Foster&quot;,
+                    &quot;reviewerEmail&quot;: &quot;benjamin.foster@x.dummyjson.com&quot;
+                }
+            ],
+            &quot;returnPolicy&quot;: &quot;No return policy&quot;,
+            &quot;minimumOrderQuantity&quot;: 32,
+            &quot;meta&quot;: {
+                &quot;createdAt&quot;: &quot;2026-02-06T14:03:24.867Z&quot;,
+                &quot;updatedAt&quot;: &quot;2026-08-20T05:44:35.354Z&quot;,
+                &quot;barcode&quot;: &quot;3478638588469&quot;,
+                &quot;qrCode&quot;: &quot;https://cdn.dummyjson.com/public/qr-code.png&quot;
+            },
+            &quot;images&quot;: [
+                &quot;https://cdn.dummyjson.com/product-images/groceries/eggs/1.webp&quot;
+            ],
+            &quot;thumbnail&quot;: &quot;https://cdn.dummyjson.com/product-images/groceries/eggs/thumbnail.webp&quot;
+        },
+        {
+            &quot;id&quot;: 24,
+            &quot;title&quot;: &quot;Fish Steak&quot;,
+            &quot;description&quot;: &quot;Quality fish steak, suitable for grilling, baking, or pan-searing.&quot;,
+            &quot;category&quot;: &quot;groceries&quot;,
+            &quot;price&quot;: 14.99,
+            &quot;discountPercentage&quot;: 4.23,
+            &quot;rating&quot;: 3.78,
+            &quot;stock&quot;: 74,
+            &quot;tags&quot;: [
+                &quot;seafood&quot;
+            ],
+            &quot;sku&quot;: &quot;GRO-BRD-FIS-024&quot;,
+            &quot;weight&quot;: 6,
+            &quot;dimensions&quot;: {
+                &quot;width&quot;: 14.95,
+                &quot;height&quot;: 26.31,
+                &quot;depth&quot;: 11.27
+            },
+            &quot;warrantyInformation&quot;: &quot;1 month warranty&quot;,
+            &quot;shippingInformation&quot;: &quot;Ships in 3-5 business days&quot;,
+            &quot;availabilityStatus&quot;: &quot;In Stock&quot;,
+            &quot;reviews&quot;: [
+                {
+                    &quot;rating&quot;: 2,
+                    &quot;comment&quot;: &quot;Would not buy again!&quot;,
+                    &quot;date&quot;: &quot;2025-04-30T09:41:02.053Z&quot;,
+                    &quot;reviewerName&quot;: &quot;Caleb Perkins&quot;,
+                    &quot;reviewerEmail&quot;: &quot;caleb.perkins@x.dummyjson.com&quot;
+                },
+                {
+                    &quot;rating&quot;: 5,
+                    &quot;comment&quot;: &quot;Excellent quality!&quot;,
+                    &quot;date&quot;: &quot;2025-04-30T09:41:02.053Z&quot;,
+                    &quot;reviewerName&quot;: &quot;Isabella Jackson&quot;,
+                    &quot;reviewerEmail&quot;: &quot;isabella.jackson@x.dummyjson.com&quot;
+                },
+                {
+                    &quot;rating&quot;: 4,
+                    &quot;comment&quot;: &quot;Great value for money!&quot;,
+                    &quot;date&quot;: &quot;2025-04-30T09:41:02.053Z&quot;,
+                    &quot;reviewerName&quot;: &quot;Nathan Dixon&quot;,
+                    &quot;reviewerEmail&quot;: &quot;nathan.dixon@x.dummyjson.com&quot;
+                }
+            ],
+            &quot;returnPolicy&quot;: &quot;60 days return policy&quot;,
+            &quot;minimumOrderQuantity&quot;: 50,
+            &quot;meta&quot;: {
+                &quot;createdAt&quot;: &quot;2025-05-24T22:00:13.090Z&quot;,
+                &quot;updatedAt&quot;: &quot;2025-12-05T01:25:43.902Z&quot;,
+                &quot;barcode&quot;: &quot;9595036192098&quot;,
+                &quot;qrCode&quot;: &quot;https://cdn.dummyjson.com/public/qr-code.png&quot;
+            },
+            &quot;images&quot;: [
+                &quot;https://cdn.dummyjson.com/product-images/groceries/fish-steak/1.webp&quot;
+            ],
+            &quot;thumbnail&quot;: &quot;https://cdn.dummyjson.com/product-images/groceries/fish-steak/thumbnail.webp&quot;
+        },
+        {
+            &quot;id&quot;: 25,
+            &quot;title&quot;: &quot;Green Bell Pepper&quot;,
+            &quot;description&quot;: &quot;Fresh and vibrant green bell pepper, perfect for adding color and flavor to your dishes.&quot;,
+            &quot;category&quot;: &quot;groceries&quot;,
+            &quot;price&quot;: 1.29,
+            &quot;discountPercentage&quot;: 0.16,
+            &quot;rating&quot;: 3.25,
+            &quot;stock&quot;: 33,
+            &quot;tags&quot;: [
+                &quot;vegetables&quot;
+            ],
+            &quot;sku&quot;: &quot;GRO-BRD-GRE-025&quot;,
+            &quot;weight&quot;: 2,
+            &quot;dimensions&quot;: {
+                &quot;width&quot;: 15.33,
+                &quot;height&quot;: 26.65,
+                &quot;depth&quot;: 14.44
+            },
+            &quot;warrantyInformation&quot;: &quot;1 month warranty&quot;,
+            &quot;shippingInformation&quot;: &quot;Ships in 1 week&quot;,
+            &quot;availabilityStatus&quot;: &quot;In Stock&quot;,
+            &quot;reviews&quot;: [
+                {
+                    &quot;rating&quot;: 4,
+                    &quot;comment&quot;: &quot;Highly recommended!&quot;,
+                    &quot;date&quot;: &quot;2025-04-30T09:41:02.053Z&quot;,
+                    &quot;reviewerName&quot;: &quot;Avery Carter&quot;,
+                    &quot;reviewerEmail&quot;: &quot;avery.carter@x.dummyjson.com&quot;
+                },
+                {
+                    &quot;rating&quot;: 3,
+                    &quot;comment&quot;: &quot;Would not recommend!&quot;,
+                    &quot;date&quot;: &quot;2025-04-30T09:41:02.053Z&quot;,
+                    &quot;reviewerName&quot;: &quot;Henry Hill&quot;,
+                    &quot;reviewerEmail&quot;: &quot;henry.hill@x.dummyjson.com&quot;
+                },
+                {
+                    &quot;rating&quot;: 5,
+                    &quot;comment&quot;: &quot;Excellent quality!&quot;,
+                    &quot;date&quot;: &quot;2025-04-30T09:41:02.053Z&quot;,
+                    &quot;reviewerName&quot;: &quot;Addison Wright&quot;,
+                    &quot;reviewerEmail&quot;: &quot;addison.wright@x.dummyjson.com&quot;
+                }
+            ],
+            &quot;returnPolicy&quot;: &quot;30 days return policy&quot;,
+            &quot;minimumOrderQuantity&quot;: 12,
+            &quot;meta&quot;: {
+                &quot;createdAt&quot;: &quot;2024-12-16T06:21:20.741Z&quot;,
+                &quot;updatedAt&quot;: &quot;2025-03-26T10:22:41.216Z&quot;,
+                &quot;barcode&quot;: &quot;2365227493323&quot;,
+                &quot;qrCode&quot;: &quot;https://cdn.dummyjson.com/public/qr-code.png&quot;
+            },
+            &quot;images&quot;: [
+                &quot;https://cdn.dummyjson.com/product-images/groceries/green-bell-pepper/1.webp&quot;
+            ],
+            &quot;thumbnail&quot;: &quot;https://cdn.dummyjson.com/product-images/groceries/green-bell-pepper/thumbnail.webp&quot;
+        },
+        {
+            &quot;id&quot;: 26,
+            &quot;title&quot;: &quot;Green Chili Pepper&quot;,
+            &quot;description&quot;: &quot;Spicy green chili pepper, ideal for adding heat to your favorite recipes.&quot;,
+            &quot;category&quot;: &quot;groceries&quot;,
+            &quot;price&quot;: 0.99,
+            &quot;discountPercentage&quot;: 1,
+            &quot;rating&quot;: 3.66,
+            &quot;stock&quot;: 3,
+            &quot;tags&quot;: [
+                &quot;vegetables&quot;
+            ],
+            &quot;sku&quot;: &quot;GRO-BRD-GRE-026&quot;,
+            &quot;weight&quot;: 7,
+            &quot;dimensions&quot;: {
+                &quot;width&quot;: 15.38,
+                &quot;height&quot;: 18.12,
+                &quot;depth&quot;: 19.92
+            },
+            &quot;warrantyInformation&quot;: &quot;2 year warranty&quot;,
+            &quot;shippingInformation&quot;: &quot;Ships in 1 week&quot;,
+            &quot;availabilityStatus&quot;: &quot;Low Stock&quot;,
+            &quot;reviews&quot;: [
+                {
+                    &quot;rating&quot;: 4,
+                    &quot;comment&quot;: &quot;Great product!&quot;,
+                    &quot;date&quot;: &quot;2025-04-30T09:41:02.053Z&quot;,
+                    &quot;reviewerName&quot;: &quot;Luna Russell&quot;,
+                    &quot;reviewerEmail&quot;: &quot;luna.russell@x.dummyjson.com&quot;
+                },
+                {
+                    &quot;rating&quot;: 1,
+                    &quot;comment&quot;: &quot;Waste of money!&quot;,
+                    &quot;date&quot;: &quot;2025-04-30T09:41:02.053Z&quot;,
+                    &quot;reviewerName&quot;: &quot;Noah Lewis&quot;,
+                    &quot;reviewerEmail&quot;: &quot;noah.lewis@x.dummyjson.com&quot;
+                },
+                {
+                    &quot;rating&quot;: 3,
+                    &quot;comment&quot;: &quot;Very disappointed!&quot;,
+                    &quot;date&quot;: &quot;2025-04-30T09:41:02.053Z&quot;,
+                    &quot;reviewerName&quot;: &quot;Clara Berry&quot;,
+                    &quot;reviewerEmail&quot;: &quot;clara.berry@x.dummyjson.com&quot;
+                }
+            ],
+            &quot;returnPolicy&quot;: &quot;30 days return policy&quot;,
+            &quot;minimumOrderQuantity&quot;: 39,
+            &quot;meta&quot;: {
+                &quot;createdAt&quot;: &quot;2025-08-13T07:35:11.030Z&quot;,
+                &quot;updatedAt&quot;: &quot;2026-07-07T04:30:44.059Z&quot;,
+                &quot;barcode&quot;: &quot;9335000538563&quot;,
+                &quot;qrCode&quot;: &quot;https://cdn.dummyjson.com/public/qr-code.png&quot;
+            },
+            &quot;images&quot;: [
+                &quot;https://cdn.dummyjson.com/product-images/groceries/green-chili-pepper/1.webp&quot;
+            ],
+            &quot;thumbnail&quot;: &quot;https://cdn.dummyjson.com/product-images/groceries/green-chili-pepper/thumbnail.webp&quot;
+        },
+        {
+            &quot;id&quot;: 27,
+            &quot;title&quot;: &quot;Honey Jar&quot;,
+            &quot;description&quot;: &quot;Pure and natural honey in a convenient jar, perfect for sweetening beverages or drizzling over food.&quot;,
+            &quot;category&quot;: &quot;groceries&quot;,
+            &quot;price&quot;: 6.99,
+            &quot;discountPercentage&quot;: 14.4,
+            &quot;rating&quot;: 3.97,
+            &quot;stock&quot;: 34,
+            &quot;tags&quot;: [
+                &quot;condiments&quot;
+            ],
+            &quot;sku&quot;: &quot;GRO-BRD-HON-027&quot;,
+            &quot;weight&quot;: 2,
+            &quot;dimensions&quot;: {
+                &quot;width&quot;: 9.28,
+                &quot;height&quot;: 21.72,
+                &quot;depth&quot;: 17.74
+            },
+            &quot;warrantyInformation&quot;: &quot;1 month warranty&quot;,
+            &quot;shippingInformation&quot;: &quot;Ships in 1-2 business days&quot;,
+            &quot;availabilityStatus&quot;: &quot;In Stock&quot;,
+            &quot;reviews&quot;: [
+                {
+                    &quot;rating&quot;: 1,
+                    &quot;comment&quot;: &quot;Very disappointed!&quot;,
+                    &quot;date&quot;: &quot;2025-04-30T09:41:02.053Z&quot;,
+                    &quot;reviewerName&quot;: &quot;Autumn Gomez&quot;,
+                    &quot;reviewerEmail&quot;: &quot;autumn.gomez@x.dummyjson.com&quot;
+                },
+                {
+                    &quot;rating&quot;: 4,
+                    &quot;comment&quot;: &quot;Highly impressed!&quot;,
+                    &quot;date&quot;: &quot;2025-04-30T09:41:02.053Z&quot;,
+                    &quot;reviewerName&quot;: &quot;Benjamin Wilson&quot;,
+                    &quot;reviewerEmail&quot;: &quot;benjamin.wilson@x.dummyjson.com&quot;
+                },
+                {
+                    &quot;rating&quot;: 2,
+                    &quot;comment&quot;: &quot;Very disappointed!&quot;,
+                    &quot;date&quot;: &quot;2025-04-30T09:41:02.053Z&quot;,
+                    &quot;reviewerName&quot;: &quot;Nicholas Edwards&quot;,
+                    &quot;reviewerEmail&quot;: &quot;nicholas.edwards@x.dummyjson.com&quot;
+                }
+            ],
+            &quot;returnPolicy&quot;: &quot;90 days return policy&quot;,
+            &quot;minimumOrderQuantity&quot;: 47,
+            &quot;meta&quot;: {
+                &quot;createdAt&quot;: &quot;2024-09-24T17:38:48.991Z&quot;,
+                &quot;updatedAt&quot;: &quot;2025-01-10T02:20:32.078Z&quot;,
+                &quot;barcode&quot;: &quot;6354306346329&quot;,
+                &quot;qrCode&quot;: &quot;https://cdn.dummyjson.com/public/qr-code.png&quot;
+            },
+            &quot;images&quot;: [
+                &quot;https://cdn.dummyjson.com/product-images/groceries/honey-jar/1.webp&quot;
+            ],
+            &quot;thumbnail&quot;: &quot;https://cdn.dummyjson.com/product-images/groceries/honey-jar/thumbnail.webp&quot;
+        },
+        {
+            &quot;id&quot;: 28,
+            &quot;title&quot;: &quot;Ice Cream&quot;,
+            &quot;description&quot;: &quot;Creamy and delicious ice cream, available in various flavors for a delightful treat.&quot;,
+            &quot;category&quot;: &quot;groceries&quot;,
+            &quot;price&quot;: 5.49,
+            &quot;discountPercentage&quot;: 8.69,
+            &quot;rating&quot;: 3.39,
+            &quot;stock&quot;: 27,
+            &quot;tags&quot;: [
+                &quot;desserts&quot;
+            ],
+            &quot;sku&quot;: &quot;GRO-BRD-CRE-028&quot;,
+            &quot;weight&quot;: 1,
+            &quot;dimensions&quot;: {
+                &quot;width&quot;: 14.83,
+                &quot;height&quot;: 15.07,
+                &quot;depth&quot;: 24.2
+            },
+            &quot;warrantyInformation&quot;: &quot;1 month warranty&quot;,
+            &quot;shippingInformation&quot;: &quot;Ships in 2 weeks&quot;,
+            &quot;availabilityStatus&quot;: &quot;In Stock&quot;,
+            &quot;reviews&quot;: [
+                {
+                    &quot;rating&quot;: 5,
+                    &quot;comment&quot;: &quot;Very pleased!&quot;,
+                    &quot;date&quot;: &quot;2025-04-30T09:41:02.053Z&quot;,
+                    &quot;reviewerName&quot;: &quot;Elijah Cruz&quot;,
+                    &quot;reviewerEmail&quot;: &quot;elijah.cruz@x.dummyjson.com&quot;
+                },
+                {
+                    &quot;rating&quot;: 4,
+                    &quot;comment&quot;: &quot;Excellent quality!&quot;,
+                    &quot;date&quot;: &quot;2025-04-30T09:41:02.053Z&quot;,
+                    &quot;reviewerName&quot;: &quot;Jace Smith&quot;,
+                    &quot;reviewerEmail&quot;: &quot;jace.smith@x.dummyjson.com&quot;
+                },
+                {
+                    &quot;rating&quot;: 5,
+                    &quot;comment&quot;: &quot;Highly impressed!&quot;,
+                    &quot;date&quot;: &quot;2025-04-30T09:41:02.053Z&quot;,
+                    &quot;reviewerName&quot;: &quot;Sadie Morales&quot;,
+                    &quot;reviewerEmail&quot;: &quot;sadie.morales@x.dummyjson.com&quot;
+                }
+            ],
+            &quot;returnPolicy&quot;: &quot;No return policy&quot;,
+            &quot;minimumOrderQuantity&quot;: 42,
+            &quot;meta&quot;: {
+                &quot;createdAt&quot;: &quot;2025-10-23T18:27:08.836Z&quot;,
+                &quot;updatedAt&quot;: &quot;2025-11-04T01:48:01.853Z&quot;,
+                &quot;barcode&quot;: &quot;0788954559076&quot;,
+                &quot;qrCode&quot;: &quot;https://cdn.dummyjson.com/public/qr-code.png&quot;
+            },
+            &quot;images&quot;: [
+                &quot;https://cdn.dummyjson.com/product-images/groceries/ice-cream/1.webp&quot;,
+                &quot;https://cdn.dummyjson.com/product-images/groceries/ice-cream/2.webp&quot;,
+                &quot;https://cdn.dummyjson.com/product-images/groceries/ice-cream/3.webp&quot;,
+                &quot;https://cdn.dummyjson.com/product-images/groceries/ice-cream/4.webp&quot;
+            ],
+            &quot;thumbnail&quot;: &quot;https://cdn.dummyjson.com/product-images/groceries/ice-cream/thumbnail.webp&quot;
+        },
+        {
+            &quot;id&quot;: 29,
+            &quot;title&quot;: &quot;Juice&quot;,
+            &quot;description&quot;: &quot;Refreshing fruit juice, packed with vitamins and great for staying hydrated.&quot;,
+            &quot;category&quot;: &quot;groceries&quot;,
+            &quot;price&quot;: 3.99,
+            &quot;discountPercentage&quot;: 12.06,
+            &quot;rating&quot;: 3.94,
+            &quot;stock&quot;: 50,
+            &quot;tags&quot;: [
+                &quot;beverages&quot;
+            ],
+            &quot;sku&quot;: &quot;GRO-BRD-JUI-029&quot;,
+            &quot;weight&quot;: 1,
+            &quot;dimensions&quot;: {
+                &quot;width&quot;: 18.56,
+                &quot;height&quot;: 21.46,
+                &quot;depth&quot;: 28.02
+            },
+            &quot;warrantyInformation&quot;: &quot;6 months warranty&quot;,
+            &quot;shippingInformation&quot;: &quot;Ships in 1 week&quot;,
+            &quot;availabilityStatus&quot;: &quot;In Stock&quot;,
+            &quot;reviews&quot;: [
+                {
+                    &quot;rating&quot;: 5,
+                    &quot;comment&quot;: &quot;Excellent quality!&quot;,
+                    &quot;date&quot;: &quot;2025-04-30T09:41:02.053Z&quot;,
+                    &quot;reviewerName&quot;: &quot;Nolan Gonzalez&quot;,
+                    &quot;reviewerEmail&quot;: &quot;nolan.gonzalez@x.dummyjson.com&quot;
+                },
+                {
+                    &quot;rating&quot;: 4,
+                    &quot;comment&quot;: &quot;Would buy again!&quot;,
+                    &quot;date&quot;: &quot;2025-04-30T09:41:02.053Z&quot;,
+                    &quot;reviewerName&quot;: &quot;Bella Grant&quot;,
+                    &quot;reviewerEmail&quot;: &quot;bella.grant@x.dummyjson.com&quot;
+                },
+                {
+                    &quot;rating&quot;: 5,
+                    &quot;comment&quot;: &quot;Awesome product!&quot;,
+                    &quot;date&quot;: &quot;2025-04-30T09:41:02.053Z&quot;,
+                    &quot;reviewerName&quot;: &quot;Aria Flores&quot;,
+                    &quot;reviewerEmail&quot;: &quot;aria.flores@x.dummyjson.com&quot;
+                }
+            ],
+            &quot;returnPolicy&quot;: &quot;No return policy&quot;,
+            &quot;minimumOrderQuantity&quot;: 25,
+            &quot;meta&quot;: {
+                &quot;createdAt&quot;: &quot;2026-04-01T05:44:29.516Z&quot;,
+                &quot;updatedAt&quot;: &quot;2026-07-04T11:56:17.202Z&quot;,
+                &quot;barcode&quot;: &quot;6936112580956&quot;,
+                &quot;qrCode&quot;: &quot;https://cdn.dummyjson.com/public/qr-code.png&quot;
+            },
+            &quot;images&quot;: [
+                &quot;https://cdn.dummyjson.com/product-images/groceries/juice/1.webp&quot;
+            ],
+            &quot;thumbnail&quot;: &quot;https://cdn.dummyjson.com/product-images/groceries/juice/thumbnail.webp&quot;
+        },
+        {
+            &quot;id&quot;: 30,
+            &quot;title&quot;: &quot;Kiwi&quot;,
+            &quot;description&quot;: &quot;Nutrient-rich kiwi, perfect for snacking or adding a tropical twist to your dishes.&quot;,
+            &quot;category&quot;: &quot;groceries&quot;,
+            &quot;price&quot;: 2.49,
+            &quot;discountPercentage&quot;: 15.22,
+            &quot;rating&quot;: 4.93,
+            &quot;stock&quot;: 99,
+            &quot;tags&quot;: [
+                &quot;fruits&quot;
+            ],
+            &quot;sku&quot;: &quot;GRO-BRD-KIW-030&quot;,
+            &quot;weight&quot;: 5,
+            &quot;dimensions&quot;: {
+                &quot;width&quot;: 19.4,
+                &quot;height&quot;: 18.67,
+                &quot;depth&quot;: 17.13
+            },
+            &quot;warrantyInformation&quot;: &quot;6 months warranty&quot;,
+            &quot;shippingInformation&quot;: &quot;Ships overnight&quot;,
+            &quot;availabilityStatus&quot;: &quot;In Stock&quot;,
+            &quot;reviews&quot;: [
+                {
+                    &quot;rating&quot;: 4,
+                    &quot;comment&quot;: &quot;Highly recommended!&quot;,
+                    &quot;date&quot;: &quot;2025-04-30T09:41:02.053Z&quot;,
+                    &quot;reviewerName&quot;: &quot;Emily Brown&quot;,
+                    &quot;reviewerEmail&quot;: &quot;emily.brown@x.dummyjson.com&quot;
+                },
+                {
+                    &quot;rating&quot;: 2,
+                    &quot;comment&quot;: &quot;Would not buy again!&quot;,
+                    &quot;date&quot;: &quot;2025-04-30T09:41:02.053Z&quot;,
+                    &quot;reviewerName&quot;: &quot;Jackson Morales&quot;,
+                    &quot;reviewerEmail&quot;: &quot;jackson.morales@x.dummyjson.com&quot;
+                },
+                {
+                    &quot;rating&quot;: 4,
+                    &quot;comment&quot;: &quot;Fast shipping!&quot;,
+                    &quot;date&quot;: &quot;2025-04-30T09:41:02.053Z&quot;,
+                    &quot;reviewerName&quot;: &quot;Nora Russell&quot;,
+                    &quot;reviewerEmail&quot;: &quot;nora.russell@x.dummyjson.com&quot;
+                }
+            ],
+            &quot;returnPolicy&quot;: &quot;7 days return policy&quot;,
+            &quot;minimumOrderQuantity&quot;: 30,
+            &quot;meta&quot;: {
+                &quot;createdAt&quot;: &quot;2025-08-27T05:46:53.584Z&quot;,
+                &quot;updatedAt&quot;: &quot;2026-07-21T17:09:19.864Z&quot;,
+                &quot;barcode&quot;: &quot;2530169917252&quot;,
+                &quot;qrCode&quot;: &quot;https://cdn.dummyjson.com/public/qr-code.png&quot;
+            },
+            &quot;images&quot;: [
+                &quot;https://cdn.dummyjson.com/product-images/groceries/kiwi/1.webp&quot;
+            ],
+            &quot;thumbnail&quot;: &quot;https://cdn.dummyjson.com/product-images/groceries/kiwi/thumbnail.webp&quot;
+        }
+    ],
+    &quot;total&quot;: 194,
+    &quot;skip&quot;: 20,
+    &quot;limit&quot;: 10
+}</pre>
+    </div>
+  </div>
+  </div>
+
+        </div>
+    </div>
+  </div>
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">the HTTP status code should be <span class="argument">200</span></span>
+
+  <span class="lead-duration duration">0.002</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="inner-level hooks-step-after">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-20">
+
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+    </div>
+
+    <div id="after-20" class="inner-level collapse collapsable-details ">
+        <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">After</span>
+              <span class="location name">com.automationexercise.api.hooks.Hooks.logResponseToReport(io.cucumber.java.Scenario)</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+          </div>
+
+
+
+
+
+
+
+        </div>
+    </div>
+  </div>
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">the response should match the following assertions:</span>
+
+  <span class="lead-duration duration">0.057</span>
+
+</div>
+
+
+
+
+
+
+
+          <table class="step-arguments">
+              <tr>
+                  <td>field</td>
+                  <td>matcher</td>
+                  <td>value</td>
+              </tr>
+              <tr>
+                  <td>products</td>
+                  <td>listSize</td>
+                  <td>10</td>
+              </tr>
+              <tr>
+                  <td>skip</td>
+                  <td>equalToInt</td>
+                  <td>20</td>
+              </tr>
+              <tr>
+                  <td>limit</td>
+                  <td>equalToInt</td>
+                  <td>10</td>
+              </tr>
+          </table>
+
+
+
+
+
+
+
+
+  <div class="inner-level hooks-step-after">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-21">
+
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+    </div>
+
+    <div id="after-21" class="inner-level collapse collapsable-details ">
+        <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">After</span>
+              <span class="location name">com.automationexercise.api.hooks.Hooks.logResponseToReport(io.cucumber.java.Scenario)</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+          </div>
+
+
+
+
+
+
+
+        </div>
+    </div>
+  </div>
+
+      </div>
+  </div>
+</div>
+
+
+
+
+
+  </div>
+</div>
+
+
+<div class="element">
+    <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_4_953706264.html">DummyJSON Products API - Query Parameters</a>
+    </div>
+
+
+<div class="tags indention">
+    <b>Tags:</b>
+       <a href="report-tag_1038329167.html">@dummyjson</a>
+       <a href="report-tag_3043924546.html">@functional</a>
+       <a href="report-tag_615905898.html">@query-params</a>
+       <a href="report-tag_2788516248.html">@Scenario-6</a>
+       <a href="report-tag_3182320184.html">@positive</a>
+</div>
+
+
+  <span class="lead-duration duration">0.280</span>
+
+
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-22">
+
+<div class="brief passed">
+  <span class="keyword indention">Scenario Outline</span>
+  <span class="name">GET products with different pagination parameters</span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-22" class="collapse collapsable-details ">
+
+
+  <div class="inner-level hooks-element-before">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#before-23">
+
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+    </div>
+
+    <div id="before-23" class="inner-level collapse collapsable-details ">
+        <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">Before</span>
+              <span class="location name">com.automationexercise.api.hooks.Hooks.setUp()</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+          </div>
+
+
+
+
+
+
+
+        </div>
+    </div>
+  </div>
+
+
+
+<div class="steps inner-level">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-24">
+
+<div class="brief passed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </div>
+
+  <div id="steps-24" class="inner-level collapse collapsable-details ">
+      <div class="step">
+
+
+<div class="brief step-name-When passed">
+  <span class="keyword indention">When</span>
+  <span class="name">user fetches products with limit <span class="argument">1</span> and skip <span class="argument">50</span></span>
+
+  <span class="lead-duration duration">0.215</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="inner-level hooks-step-after">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-25">
+
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+    </div>
+
+    <div id="after-25" class="inner-level collapse collapsable-details ">
+        <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">After</span>
+              <span class="location name">com.automationexercise.api.hooks.Hooks.logResponseToReport(io.cucumber.java.Scenario)</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+          </div>
+
+
+
+
+
+
+  <div class="embeddings inner-level">
+  <div class="embedding indention">
+    <div data-toggle="collapse" data-target="#embedding-26" class="collapsable-control">
+      <a>API Response</a>
+      <a href="embeddings/embedding_79148906.txt" download target="_blank">
+        <span class="download-button glyphicon glyphicon-download-alt"></span>
+      </a>
+    </div>
+
+    <div id="embedding-26" class="collapse collapsable-details ">
+      <pre class="embedding-content">HTTP 200
+{
+    &quot;products&quot;: [
+        {
+            &quot;id&quot;: 51,
+            &quot;title&quot;: &quot;Boxed Blender&quot;,
+            &quot;description&quot;: &quot;The Boxed Blender is a powerful and compact blender perfect for smoothies, shakes, and more. Its convenient design and multiple functions make it a versatile kitchen appliance.&quot;,
+            &quot;category&quot;: &quot;kitchen-accessories&quot;,
+            &quot;price&quot;: 39.99,
+            &quot;discountPercentage&quot;: 7.26,
+            &quot;rating&quot;: 4.56,
+            &quot;stock&quot;: 9,
+            &quot;tags&quot;: [
+                &quot;kitchen appliances&quot;,
+                &quot;blenders&quot;
+            ],
+            &quot;sku&quot;: &quot;KIT-BRD-BOX-051&quot;,
+            &quot;weight&quot;: 1,
+            &quot;dimensions&quot;: {
+                &quot;width&quot;: 9.05,
+                &quot;height&quot;: 19.45,
+                &quot;depth&quot;: 17.59
+            },
+            &quot;warrantyInformation&quot;: &quot;5 year warranty&quot;,
+            &quot;shippingInformation&quot;: &quot;Ships in 1-2 business days&quot;,
+            &quot;availabilityStatus&quot;: &quot;In Stock&quot;,
+            &quot;reviews&quot;: [
+                {
+                    &quot;rating&quot;: 5,
+                    &quot;comment&quot;: &quot;Very pleased!&quot;,
+                    &quot;date&quot;: &quot;2025-04-30T09:41:02.053Z&quot;,
+                    &quot;reviewerName&quot;: &quot;Ella Adams&quot;,
+                    &quot;reviewerEmail&quot;: &quot;ella.adams@x.dummyjson.com&quot;
+                },
+                {
+                    &quot;rating&quot;: 5,
+                    &quot;comment&quot;: &quot;Would buy again!&quot;,
+                    &quot;date&quot;: &quot;2025-04-30T09:41:02.053Z&quot;,
+                    &quot;reviewerName&quot;: &quot;Ruby Andrews&quot;,
+                    &quot;reviewerEmail&quot;: &quot;ruby.andrews@x.dummyjson.com&quot;
+                },
+                {
+                    &quot;rating&quot;: 5,
+                    &quot;comment&quot;: &quot;Very happy with my purchase!&quot;,
+                    &quot;date&quot;: &quot;2025-04-30T09:41:02.053Z&quot;,
+                    &quot;reviewerName&quot;: &quot;Aurora Lawson&quot;,
+                    &quot;reviewerEmail&quot;: &quot;aurora.lawson@x.dummyjson.com&quot;
+                }
+            ],
+            &quot;returnPolicy&quot;: &quot;7 days return policy&quot;,
+            &quot;minimumOrderQuantity&quot;: 4,
+            &quot;meta&quot;: {
+                &quot;createdAt&quot;: &quot;2026-03-25T03:55:56.058Z&quot;,
+                &quot;updatedAt&quot;: &quot;2026-08-13T01:11:46.331Z&quot;,
+                &quot;barcode&quot;: &quot;4823087836817&quot;,
+                &quot;qrCode&quot;: &quot;https://cdn.dummyjson.com/public/qr-code.png&quot;
+            },
+            &quot;images&quot;: [
+                &quot;https://cdn.dummyjson.com/product-images/kitchen-accessories/boxed-blender/1.webp&quot;,
+                &quot;https://cdn.dummyjson.com/product-images/kitchen-accessories/boxed-blender/2.webp&quot;,
+                &quot;https://cdn.dummyjson.com/product-images/kitchen-accessories/boxed-blender/3.webp&quot;,
+                &quot;https://cdn.dummyjson.com/product-images/kitchen-accessories/boxed-blender/4.webp&quot;
+            ],
+            &quot;thumbnail&quot;: &quot;https://cdn.dummyjson.com/product-images/kitchen-accessories/boxed-blender/thumbnail.webp&quot;
+        }
+    ],
+    &quot;total&quot;: 194,
+    &quot;skip&quot;: 50,
+    &quot;limit&quot;: 1
+}</pre>
+    </div>
+  </div>
+  </div>
+
+        </div>
+    </div>
+  </div>
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">the HTTP status code should be <span class="argument">200</span></span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="inner-level hooks-step-after">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-27">
+
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+    </div>
+
+    <div id="after-27" class="inner-level collapse collapsable-details ">
+        <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">After</span>
+              <span class="location name">com.automationexercise.api.hooks.Hooks.logResponseToReport(io.cucumber.java.Scenario)</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+          </div>
+
+
+
+
+
+
+
+        </div>
+    </div>
+  </div>
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">the response should match the following assertions:</span>
+
+  <span class="lead-duration duration">0.065</span>
+
+</div>
+
+
+
+
+
+
+
+          <table class="step-arguments">
+              <tr>
+                  <td>field</td>
+                  <td>matcher</td>
+                  <td>value</td>
+              </tr>
+              <tr>
+                  <td>products</td>
+                  <td>listSize</td>
+                  <td>1</td>
+              </tr>
+              <tr>
+                  <td>skip</td>
+                  <td>equalToInt</td>
+                  <td>50</td>
+              </tr>
+              <tr>
+                  <td>limit</td>
+                  <td>equalToInt</td>
+                  <td>1</td>
+              </tr>
+          </table>
+
+
+
+
+
+
+
+
+  <div class="inner-level hooks-step-after">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-28">
+
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+    </div>
+
+    <div id="after-28" class="inner-level collapse collapsable-details ">
+        <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">After</span>
+              <span class="location name">com.automationexercise.api.hooks.Hooks.logResponseToReport(io.cucumber.java.Scenario)</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+          </div>
+
+
+
+
+
+
+
+        </div>
+    </div>
+  </div>
+
+      </div>
+  </div>
+</div>
+
+
+
+
+
+  </div>
+</div>
+
+
+<div class="element">
+    <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_7_3179078596.html">Token-based Authentication API (DummyJSON)</a>
+    </div>
+
+
+<div class="tags indention">
+    <b>Tags:</b>
+       <a href="report-tag_4090290616.html">@token</a>
+       <a href="report-tag_3043924546.html">@functional</a>
+       <a href="report-tag_2788516248.html">@Scenario-6</a>
+       <a href="report-tag_3355626612.html">@negative</a>
+</div>
+
+
+  <span class="lead-duration duration">0.279</span>
+
+
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-29">
+
+<div class="brief passed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">Access protected endpoint with invalid token returns 500</span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-29" class="collapse collapsable-details ">
+
+
+  <div class="inner-level hooks-element-before">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#before-30">
+
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+    </div>
+
+    <div id="before-30" class="inner-level collapse collapsable-details ">
+        <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">Before</span>
+              <span class="location name">com.automationexercise.api.hooks.Hooks.setUp()</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+          </div>
+
+
+
+
+
+
+
+        </div>
+    </div>
+  </div>
+
+
+
+<div class="steps inner-level">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-31">
+
+<div class="brief passed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </div>
+
+  <div id="steps-31" class="inner-level collapse collapsable-details ">
+      <div class="step">
+
+
+<div class="brief step-name-When passed">
+  <span class="keyword indention">When</span>
+  <span class="name">user requests the authenticated user profile with token <span class="argument">&quot;invalid.jwt.token&quot;</span></span>
+
+  <span class="lead-duration duration">0.279</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="inner-level hooks-step-after">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-32">
+
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+    </div>
+
+    <div id="after-32" class="inner-level collapse collapsable-details ">
+        <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">After</span>
+              <span class="location name">com.automationexercise.api.hooks.Hooks.logResponseToReport(io.cucumber.java.Scenario)</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+          </div>
+
+
+
+
+
+
+  <div class="embeddings inner-level">
+  <div class="embedding indention">
+    <div data-toggle="collapse" data-target="#embedding-33" class="collapsable-control">
+      <a>API Response</a>
+      <a href="embeddings/embedding_456730802.txt" download target="_blank">
+        <span class="download-button glyphicon glyphicon-download-alt"></span>
+      </a>
+    </div>
+
+    <div id="embedding-33" class="collapse collapsable-details ">
+      <pre class="embedding-content">HTTP 500
+{
+    &quot;message&quot;: &quot;invalid token&quot;
+}</pre>
+    </div>
+  </div>
+  </div>
+
+        </div>
+    </div>
+  </div>
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">the HTTP status code should be <span class="argument">500</span></span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="inner-level hooks-step-after">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-34">
+
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+    </div>
+
+    <div id="after-34" class="inner-level collapse collapsable-details ">
+        <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">After</span>
+              <span class="location name">com.automationexercise.api.hooks.Hooks.logResponseToReport(io.cucumber.java.Scenario)</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+          </div>
+
+
+
+
+
+
+
+        </div>
+    </div>
+  </div>
+
+      </div>
+  </div>
+</div>
+
+
+
+
+
+  </div>
+</div>
+
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-1 col-md-offset-10">
+      <i class="fa fa-chevron-circle-down fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('show')"></i>
+      <i class="fa fa-chevron-circle-up fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('hide')"></i>
+    </div>
+  </div>
+</div>
+
+<br/>
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>

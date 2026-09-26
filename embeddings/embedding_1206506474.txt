@@ -1,0 +1,22 @@
+HTTP 200
+{
+    "responseCode": 200,
+    "user": {
+        "id": 2929521,
+        "name": "JaneDoe",
+        "email": "jg_qa_getuser@testmail.com",
+        "title": "Mrs",
+        "birth_day": "22",
+        "birth_month": "3",
+        "birth_year": "1985",
+        "first_name": "Jane",
+        "last_name": "Doe",
+        "company": "JaneCorp",
+        "address1": "456 Oak Avenue",
+        "address2": "Apt 2B",
+        "country": "Canada",
+        "state": "Ontario",
+        "city": "Toronto",
+        "zipcode": "M5V 2T6"
+    }
+}

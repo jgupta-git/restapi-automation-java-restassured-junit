@@ -1,0 +1,4 @@
+HTTP 401
+{
+    "message": "Access Token is required"
+}
